@@ -1,0 +1,49 @@
+.capacitacion{
+    display: flex;
+    margin:0px 60px;
+    margin-top: 50px;
+    margin-bottom: 130px;
+    align-items: center;
+}
+
+.capacitacion img{
+    width: 572px;
+    height: 401px;
+    object-fit: cover;
+}
+
+.subcapa{
+    margin: 30px;
+}
+
+.subcapa h1{
+    margin: 0px;
+}
+
+.subcapa p{
+    margin: 10px 0 10px;
+}
+
+.disponibilidad {
+    font-weight: bold;
+}
+
+.disponibilidad span{
+    color: #F1BA0A;
+}
+
+.capa-button{
+    background-color:#D65886;
+    color: white;
+    border-radius: 10px;
+    border: 0px;
+    cursor: pointer;
+    width: 110px;
+    height: 30px;
+}
+
+.capa-button:active{
+    transform: scale(0.98);
+    background-color: #d658869f;
+    ;
+}

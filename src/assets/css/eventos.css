@@ -1,0 +1,103 @@
+.cuadro-evento{
+    background-color: #5DC1B9;
+    padding: 1px;
+    color: white;
+}
+.cuadro-evento h2{
+    text-align: center;
+    font-size: 60px;
+    text-transform: uppercase;
+    margin: 30px 0;
+}
+
+.cuadro-evento h2 span{
+    color: #F1BA0A;
+}
+
+.cuadro-capacitacion{
+    background-color: #D65886;
+    padding: 1px;
+    color: white;
+}
+.cuadro-capacitacion h2{
+    text-align: center;
+    font-size: 60px;
+    text-transform: uppercase;
+    margin: 30px 0;
+}
+
+.cuadro-capacitacion h2 span{
+    color: #F1BA0A;
+}
+
+.galeria-titulo{
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 30px 0;
+    text-decoration: underline;
+}
+.eventos{
+    display: flex;
+    margin: 0px 60px;
+    align-items: center;
+}
+  
+.eventos img{
+    width: 572px;
+    height: 401px;
+    object-fit: cover;
+}
+
+.subevent{
+    margin: 30px;
+}
+
+.subevent h1{
+    margin: 0px;
+}
+
+.subevent p{
+    margin: 10px 0 10px;
+}
+
+.creador{
+    display: flex;
+    align-items: center;
+}
+
+.creador img{
+    margin-right: 10px;
+    width: 32px;
+    height: auto;
+}
+
+.descipcion{
+    margin: 5px 0px 160px;
+}
+
+.comentarios{
+    border-top: black 1px solid;
+    display: flex;
+    align-items: center;
+    
+}
+.coment p{
+    margin-left: 10px;
+}
+
+.coment p:hover{
+    border-bottom: 1px black solid;
+    cursor: pointer;
+}
+
+.like {
+    padding-left: 400px;
+    display: flex;
+    align-items: center;
+}
+.like img{
+    margin-left: 10px;
+    width: 15px;
+    height: auto;
+}

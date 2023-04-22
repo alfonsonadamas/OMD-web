@@ -4,6 +4,7 @@ import LayoutRoot from "../layout/LayoutRoot";
 import LayoutPrivate from "../layout/LayoutPrivate";
 
 import Main from '../pages/Main';
+import Eventos from '../pages/Eventos';
 import Comunidad from "../pages/Comunidad";
 import Fortalecimientos from "../pages/Fortalecimientos";
 import Login from "../pages/Login";
@@ -30,6 +31,10 @@ export const router  = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login />
+            },
+            {
+                path: '/eventos',
+                element: <Eventos />
             },
             {
                 path: '/registro',
