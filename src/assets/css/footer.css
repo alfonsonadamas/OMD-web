@@ -1,0 +1,100 @@
+.footer{
+  background-color: #0A2342;
+}
+
+.footer p{
+  margin: 0;
+}
+
+.footer_main{
+  display: flex;
+  border-bottom: 2px solid #D65886;
+}
+
+.links{
+  display: flex;
+  flex-direction: column;
+}
+
+.tittle_footer{
+  font-size: 16px;
+  color: white;
+  font-weight: bolder;
+}
+
+.tittle_footer a{
+  transition: all 0.2s ease-in;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+.tittle_footer a:hover{
+  color: #F1BA0A;
+}
+
+.footer_nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 20px;
+  width: 70%;
+  padding-bottom: 20px;
+}
+
+.social{
+  margin-left: -20px;
+}
+
+.social_network{
+  display: flex;
+  flex-direction: row;
+}
+
+.social_network img{
+  width: 22px;
+  height: auto;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.social_network img:first-of-type{
+  margin-left: 0;
+}
+
+.text{
+  color: white;
+  font-weight: lighter;
+  font-size: 16px;
+}
+
+.map{
+  margin-right: 20px;
+}
+
+.loc_name{
+  width: 180px;
+  color: white;
+  font-size: 12px;
+}
+
+.omd_logo{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 30%;
+  margin-right: 60px;
+}
+
+
+.omd_logo img{
+  width: 255px;
+  height: auto;
+}
+
+.copy{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding: 10px 10px;
+}

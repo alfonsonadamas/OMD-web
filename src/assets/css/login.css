@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap');
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:15px 0;
+}
+
+.form_login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 493px;
+    margin: 90px 0;
+    margin-right: 70px;
+    
+}
+
+.form_login img{
+    width: 309px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.form_login h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 80px;
+}
+
+.form_login form{
+    display: flex;
+    flex-direction: column;
+    width: 393px;
+}
+
+.button_sbt{
+    background-color: #D65886;
+    color: white;
+    font-family: 'Readex Pro', sans-serif;
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.input_form{
+    position: relative;
+    
+}
+
+.input_form input{
+    box-sizing: border-box;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Readex Pro', sans-serif;
+    width: 393px;
+    border-radius: 15px;
+    border: 2px solid black;
+    margin-bottom: 20px;
+}
+
+.input_icon img{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 12px;
+    top: 35%;
+    transform: translateY(-50%);
+}
+
+.login_img img{
+    width: 450px;
+    height: auto;
+    border-radius: 22px;
+}
+
+.fg_password{
+    text-align: end;
+    color: #F1BA0A;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.fg_password:hover{
+    color: #F1BA0A;
+}
+
+.link_register{
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.register{
+    color: #F1BA0A;
+    text-decoration: none;
+    
+}
+
+.register:hover{
+    color: #F1BA0A;
+}
+
+.register_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 180px;
+    margin-top: 50px;
+}
+
+
+.register_img img{
+    width: 250px;
+    height: auto;
+}
+
+.button_sbt_register{
+    width: 100%;
+    background-color: #D65886;
+    color: white;
+    font-family: 'Readex Pro', sans-serif;
+    border: none;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+.register_tittle h2{
+    text-align: center;
+    color: #D65886;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.register_tittle h3{
+    text-align: center;
+    font-weight: bolder;
+}
+
+.register_tittle p{
+    text-align: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.error{
+    color: red;
+    font-weight: bolder;
+    margin-top: -10px;
+    text-align: end;
+}

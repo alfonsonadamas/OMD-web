@@ -1,0 +1,83 @@
+.body{
+    display: flex;
+    justify-content: space-around;
+    padding: 150px 100px;
+    padding-bottom: 120px;
+    width: 100%;
+}
+
+.body_img{
+    width: 50%;
+}
+
+.body_img img{
+    width: 543px;
+    height: 491;
+}
+
+.body_info{
+    text-align: justify;
+    margin-right: 60px;
+    padding: 0 40px;
+}
+
+.body_info h2{
+    text-transform: uppercase;
+    text-align: start;
+    width: 500px;
+    margin-bottom: 30px;
+    font-weight: bolder;
+}
+
+.body_info{
+    font-size: 20px;
+}
+
+.body_info button{
+    border: none;
+    width: 190px;
+    height: 52px;
+    background: #D65886;
+    border-radius: 15px;
+    color: white;
+    margin-top: 20px;
+}
+
+.cinto{
+    background-color: #5DC1B9;
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    margin-bottom: 60px;
+}
+
+.cinto h3{
+    color: white;
+    font-style: italic;
+}
+
+.cinto p{
+    color: white;
+    font-size: 20px;
+}
+
+.cinto button{
+    padding: 8px 60px;
+    font-weight: bolder;
+    transition: all 0.2s ease-in;
+}
+
+.cinto button:hover{
+    background-color: #F1BA0A;
+}
+
+@media (max-width: 1366px) {
+    .cinto{
+        background-color: #D65886;
+        max-width: 1366px;
+    }
+}
