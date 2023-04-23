@@ -9,6 +9,8 @@ import Comunidad from "../pages/Comunidad";
 import Fortalecimientos from "../pages/Fortalecimientos";
 import Login from "../pages/Login";
 import Perfil from "../pages/Perfil";
+import Nosotros from '../pages/Nosotros'
+import Galeria from '../pages/Galeria'
 import RegistroCorreo from "../pages/RegistroCorreo";
 
 export const router  = createBrowserRouter([
@@ -31,6 +33,14 @@ export const router  = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login />
+            },
+            {
+                path: '/nosotros',
+                element: <Nosotros/>
+            },
+            {
+                path: '/galeria',
+                element: <Galeria/>
             },
             {
                 path: '/eventos',

@@ -1,0 +1,87 @@
+.contenedor{
+    margin: 40px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 80px;
+    margin-top: 80px;
+}
+
+.nosotros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin-right: 40px;
+}
+
+.contenedor img{
+    width: 40%;
+}
+
+.nosotros p{
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: lighter;
+    margin-bottom: 50px;
+    width: 90%;
+    text-align: center;
+}
+
+.nosotros h2{
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 30px;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+.Video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px;
+}
+
+.ConMV{
+    display: grid;
+    place-items: center;
+    margin: 40px 200px 40px 200px;
+}
+
+.conMis{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.conVis{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
+.conVis div p{
+    text-align: right;
+}
+
+.conMis div p{
+    text-align: left;
+}
+
+.MV{
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+.MVT{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: center;
+}
