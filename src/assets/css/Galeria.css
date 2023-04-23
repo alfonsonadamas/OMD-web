@@ -1,0 +1,112 @@
+.ImgLogo{
+    width: 300px;
+    height: auto;
+}
+
+.Cont{
+    background-color: #5DC1B9;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.Cont span{
+    border: 2px solid white;
+    height: 100px;
+    margin: 0 100px 0 100px;
+    border-radius: 15px;
+}
+
+.Cont h2{
+    color: white;
+}
+
+.Contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow: scroll;
+    width: 100%;
+    height: auto;
+    clear: both;
+}
+
+.Imagen{
+    width: 300px;
+    height: 200px;
+    padding: 0;
+    margin: 0;
+    object-fit: cover;
+    position: relative;
+}
+
+.Cont_Imag{
+    margin: 30px;
+}
+
+.Cont_Imag a img:hover{
+    opacity: 0.5;
+
+}
+
+.Cont_Imag_Infof{
+    display: none;
+}
+
+.Con_Imag_Infov{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 300px;
+    max-height: 0;
+    transition: max-height 0.7s ease-in-out;
+}
+
+.Con_Imag_Infov img{
+    width: 50%;
+    height: auto;
+}
+
+.Con_Imag_Infov div{
+    width: 50%;
+    height: auto;
+}
+
+.Con_Imag_Infov h2{
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    font-style: initial;
+    margin-bottom: 50px;
+}
+
+.Con_Imag_Infov p{
+    font-size: 25px;
+}
+
+.tect{
+    margin-right: 30px;
+}
+
+.Likes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Likes p{
+    margin: 0;
+    font-size: 15px;
+}
+
+.Likes img{
+    margin-left: 10px;
+    width: 15px;
+    height: auto;
+}
