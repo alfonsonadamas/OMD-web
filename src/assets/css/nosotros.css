@@ -57,12 +57,24 @@
     margin-bottom: 50px;
 }
 
+.conMis div{
+    margin-left: 30px;
+}
+
 .conVis{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
     margin-bottom: 50px;
+}
+
+.conVis h2{
+    text-align: end;
+}
+
+.conVis div{
+    margin-right: 30px;
 }
 
 .conVis div p{

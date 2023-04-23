@@ -6,7 +6,7 @@ import M2 from '../assets/img/3-3.png'
 const MisVis = () => {
     return(
         <div className="ConMV">
-            <div className="conMis">
+            <div  data-aos="fade-right" className="conMis">
                 <div>
                     <h2 className="MV">Misión</h2>
                     <p className="MVT">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -18,7 +18,7 @@ const MisVis = () => {
                 </div>
                 <img src={M1} alt="" />
             </div>
-            <div className="conVis">
+            <div  data-aos="fade-left" className="conVis">
                 <div>
                     <h2 className="MV">Visión</h2>
                     <p className="MVT">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
