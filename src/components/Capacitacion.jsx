@@ -2,7 +2,7 @@ import "../assets/css/capacitacion.css"
 const Capacitacion = (capacitacion) =>{
     return(
         <>
-        <div className="capacitacion" data-aos="fade-left">
+        <div className="capacitacion" data-aos="fade-right">
             <div className="subcapa">
                 <h1>{capacitacion.titulo}</h1>
                 <p>{capacitacion.descripcion}</p>
