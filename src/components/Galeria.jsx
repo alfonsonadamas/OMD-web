@@ -13,6 +13,7 @@ const Galeria = () => {
     const [classlist6, setClasslist6] = useState('false');
     const [classlist7, setClasslist7] = useState('false');
     const [classlist8, setClasslist8] = useState('false');
+    
     const handdleToggle = () =>{
         setClasslist(!classlist)
         setClasslist2("false")

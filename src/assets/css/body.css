@@ -12,7 +12,7 @@
 
 .body_img img{
     width: 543px;
-    height: 491;
+    height: 491px;
 }
 
 .body_info{
@@ -43,7 +43,8 @@
     margin-top: 20px;
 }
 
-.cinto{
+.cinta{
+    width: 100%;
     background-color: #5DC1B9;
     margin-top: 50px;
     text-align: center;
@@ -55,29 +56,117 @@
     margin-bottom: 60px;
 }
 
-.cinto h3{
+.cinta h3{
     color: white;
     font-style: italic;
+    font-size: 2vw;
 }
 
-.cinto p{
+.cinta p{
     color: white;
-    font-size: 20px;
+    font-size: 1.5vw;
 }
 
-.cinto button{
+.botoncinta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.btoncinta{
+    border: none;
+    border-radius: 30px;
+    background-color: #D65886;
     padding: 8px 60px;
     font-weight: bolder;
     transition: all 0.2s ease-in;
+    color: white;
+    font-size: 1.5vw;
 }
 
-.cinto button:hover{
+.btoncinta:hover{
     background-color: #F1BA0A;
 }
 
-@media (max-width: 1366px) {
-    .cinto{
-        background-color: #D65886;
-        max-width: 1366px;
+@media (max-width: 1200px) {
+    .btoncinta{
+        font-size: 12px;
+    }
+    .botoncinta button{
+        margin-left: 200px;
+    }
+    .botoncinta{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .cinta h3{
+        color: white;
+        font-style: italic;
+        font-size: 20px;
+    }
+    
+    .cinta p{
+        color: white;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1285px) {
+    .body{
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        /* padding: 0px 0px; */
+    }
+    .body_info{
+        margin-right: 0px;
+        text-align: center;
+        padding:auto;
+    }
+    .body_info button{
+        margin: 0;
+    }
+    .body_info h2{
+        text-transform: uppercase;
+        text-align: center;
+        width: auto;
+        margin-bottom: 30px;
+        font-weight: bolder;
+    }
+
+    .body_img img{
+        padding-top: 30px;
+        width: 543px;
+        height: auto;
+    }
+
+    .body_img{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 742px) {
+    .body_img img{
+        width: 100%;
+        height: auto;
+    }
+    .body_img{
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 627px) {
+    .body_info h2{
+        font-size: auto;
+    }
+
+    .body{
+        padding:20px 30px;
+        width: auto;
     }
 }

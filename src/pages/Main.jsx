@@ -1,5 +1,5 @@
 import logoOMD from '../assets/img/OMD_logo.jpg'
-import perfil from '../assets/img/perfil.jpg'
+import perfil from '../assets/img/perfil.png'
 // ----------------------------------------
 import Navbar from '../components/Navbar'
 import Slider from '../components/Carrusel'
