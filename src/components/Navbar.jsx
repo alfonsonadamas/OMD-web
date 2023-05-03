@@ -1,4 +1,5 @@
-import "../assets/css/nav.css"
+import "../assets/css/nav.css";
+import { useUserContext } from "../context/UserContext";
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import styled from 'styled-components';

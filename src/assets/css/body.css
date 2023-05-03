@@ -1,13 +1,13 @@
-.body{
-    display: flex;
-    justify-content: space-around;
-    padding: 150px 100px;
-    padding-bottom: 120px;
-    width: 100%;
+.body {
+  display: flex;
+  justify-content: space-around;
+  padding: 150px 100px;
+  padding-bottom: 120px;
+  width: 100%;
 }
 
-.body_img{
-    width: 50%;
+.body_img {
+  width: 50%;
 }
 
 .body_img img{
@@ -15,32 +15,26 @@
     height: 491px;
 }
 
-.body_info{
-    text-align: justify;
-    margin-right: 60px;
-    padding: 0 40px;
+.body_info {
+  text-align: justify;
+  margin-right: 60px;
+  padding: 0 40px;
 }
 
-.body_info h2{
-    text-transform: uppercase;
-    text-align: start;
-    width: 500px;
-    margin-bottom: 30px;
-    font-weight: bolder;
+.body_info p {
+  margin-bottom: 30px;
 }
 
-.body_info{
-    font-size: 20px;
+.body_info h2 {
+  text-transform: uppercase;
+  text-align: start;
+  width: 500px;
+  margin-bottom: 30px;
+  font-weight: bolder;
 }
 
-.body_info button{
-    border: none;
-    width: 190px;
-    height: 52px;
-    background: #D65886;
-    border-radius: 15px;
-    color: white;
-    margin-top: 20px;
+.body_info {
+  font-size: 20px;
 }
 
 .cinta{

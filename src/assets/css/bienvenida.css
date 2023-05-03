@@ -1,0 +1,61 @@
+.bienvenida {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bienvenida_tarjeta {
+  width: 609px;
+  height: 400px;
+  background-color: #f46197;
+  margin-top: 150px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 10px 11px 0px 4px rgba(93, 193, 185, 0.86);
+  -webkit-box-shadow: 10px 11px 0px 4px rgba(93, 193, 185, 0.86);
+  -moz-box-shadow: 10px 11px 0px 4px rgba(93, 193, 185, 0.86);
+}
+
+.bienvenida_tarjeta h2 {
+  color: white;
+  font-size: 25px;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.bienvenida_tarjeta img {
+  width: 350px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.bienvenida_tarjeta h3 {
+  color: white;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.sub {
+  width: 240px;
+  height: 3px;
+  background-color: white;
+  margin-bottom: 30px;
+}
+
+.btn_bienvenida {
+  background-color: #5dc1b9;
+  color: white;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 15px;
+  transition: all 0.2s ease-in;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+.btn_bienvenida:hover {
+  color: white;
+}
