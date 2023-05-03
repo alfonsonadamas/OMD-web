@@ -38,7 +38,7 @@ const Perfil = () => {
     <div>
       <Navbar img={logoOMD} perfil={perfil} />
 
-      <div className="info_personal">
+      <div className="info_personal" data-aos="fade-up">
         <div className="titulo_perfil">
           <h2>
             Informacion <span>General</span>
