@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import {getFirestore} from 'firebase/firestore/lite'
 import { createUserWithEmailAndPassword, getAuth, sendSignInLinkToEmail, signInWithEmailAndPassword, signOut } from "firebase/auth";
 
 const firebaseConfig = {
@@ -25,6 +26,7 @@ const actionCodeSettings = {
 }
 
 const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
 
 export const auth = getAuth(app);
 

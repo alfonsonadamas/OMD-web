@@ -46,6 +46,15 @@
     border-radius: 15px;
 }
 
+.button_sbt:disabled{
+    background-color: #cc89a2;
+    color: white;
+    font-family: 'Readex Pro', sans-serif;
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+}
+
 .input_form{
     position: relative;
     
@@ -67,8 +76,13 @@
     width: 20px;
     height: 20px;
     left: 12px;
-    top: 35%;
+    top: 25%;
     transform: translateY(-50%);
+    margin: 0;
+}
+
+.input_icon img:last-of-type{
+    top: 30%;
 }
 
 .login_img img{
@@ -130,6 +144,15 @@
     border-radius: 15px;
 }
 
+.button_sbt_register:disabled{
+    background-color: #cc89a2;
+    color: white;
+    font-family: 'Readex Pro', sans-serif;
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+}
+
 .register_tittle h2{
     text-align: center;
     color: #D65886;
@@ -152,6 +175,6 @@
 .error{
     color: red;
     font-weight: bolder;
-    margin-top: -10px;
+    margin-top: 0px;
     text-align: end;
 }
