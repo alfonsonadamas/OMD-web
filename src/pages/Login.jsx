@@ -14,11 +14,11 @@ const Login = () => {
   const navigate = useNavigate();
   const { user } = useUserContext();
 
-  // useEffect(() => {
-  //   if (user) {
-  //     navigate("/verificacionUsuario");
-  //   }
-  // });
+  useEffect(() => {
+    if (user) {
+      navigate("/verificacionUsuario");
+    }
+  });
 
   const onSubmit = async (
     { email, password },

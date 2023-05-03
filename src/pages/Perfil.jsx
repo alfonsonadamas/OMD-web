@@ -12,10 +12,15 @@ import { useNavigate } from "react-router-dom";
 const Perfil = () => {
   const { user } = useContext(UserContext);
   const navigate = useNavigate();
+  const { data, error, loading, getUser, exist } = useFirestore();
+
+  useEffect(() => {
+    getUser();
+  }, []);
+
   const handleLogout = async () => {
     try {
       await logout();
-      navigate("/login");
     } catch (error) {
       console.log(error);
     }
@@ -24,11 +29,6 @@ const Perfil = () => {
   if (!user) {
     return <Login />;
   }
-
-  const { data, error, loading, getUser, exist } = useFirestore();
-  useEffect(() => {
-    getUser();
-  }, []);
 
   if (loading) return <p>Cargando Datos</p>;
   if (error) return <p>{error}</p>;

@@ -19,7 +19,7 @@ const RegistroUsuario = () => {
     try {
       setSubmitting(true);
       addUser(nombre, apellidoPaterno, apellidoMaterno, fechaNacimiento);
-      navigate("/login");
+      navigate("/bienvenida");
     } catch (error) {
       console.log(error);
     } finally {

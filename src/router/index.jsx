@@ -17,6 +17,7 @@ import RegistroUsuario from "../pages/RegistroUsuario";
 import RegistroExisto from "../pages/RegistroExito";
 import VerificacionCorreo from "../pages/VerificacionCorreo";
 import VerificacionSesion from "../pages/VerificacionSesion";
+import Bienvenida from "../pages/Bienvenida";
 
 export const router = createBrowserRouter([
   {
@@ -96,6 +97,16 @@ export const router = createBrowserRouter([
           {
             index: true,
             element: <VerificacionSesion />,
+          },
+        ],
+      },
+      {
+        path: "/bienvenida",
+        element: <LayoutPrivate />,
+        children: [
+          {
+            index: true,
+            element: <Bienvenida />,
           },
         ],
       },
