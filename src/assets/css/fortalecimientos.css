@@ -132,12 +132,14 @@
     .fortalecimiento img{
         width: 80%;
     }
+
 }
 
 @media (max-width: 770px) {
     .fortalecimiento{
         display: none;
     }
+
     .fortalecimientoresponsivo{
         display: block;
         flex-direction: column;

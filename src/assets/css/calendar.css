@@ -22,7 +22,7 @@
 }
 
 .day{
-    margin-left: 10px;
+    margin-left: 30px;
 }
 
 .day p{
@@ -66,7 +66,7 @@
 
 .events{
     transition: color 0.2s ease-in;
-    border-bottom: 2px solid gray;
+    border-bottom: 2px solid rgb(128, 128, 128);
 }
 
 .events:hover{
@@ -79,8 +79,80 @@
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.7s ease-in-out;
+    margin-top: 10px;
+    margin-left: 50px;
 }
 
 .events.active .location{
     max-height: 300px;
+}
+
+@media screen and (max-width: 1200px) {
+    .date{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .day{
+        margin-left: 30px;
+    }
+
+    .location{
+        max-width: 400px;
+        margin-top: 20px;
+    }
+
+   button{
+    margin-right: 350px;
+
+   }
+
+   .events{
+    max-width: 700px;
+    margin-left: -100px;
+    margin-right: -100px;
+   }
+
+}
+
+@media screen and (max-width: 500px) {
+    .date{
+        display: flex;
+        flex-direction: column;
+        margin-left: -300px;
+        align-items: center;
+    }
+    .linea{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .events{
+        max-width: 700px;
+        margin-left: -200px;
+
+    }
+
+    .eventName{
+        margin-left: 150px;
+    }
+
+    .location{
+        max-width: 200px;
+        margin-left: -150px;
+        margin-top: 15px;
+    }
+
+    .event{
+        display: flex;
+        flex-direction: column;
+        max-width: 200px;
+        margin-left: 250px;
+
+    }
+
+    .event button{
+        margin-left: 200px;
+    }
 }

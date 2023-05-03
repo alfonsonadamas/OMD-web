@@ -50,3 +50,46 @@
 .afi_carrusel{
     margin: 90px 0;
 } 
+
+@media screen and (max-width: 500px) {
+    .afi_perfil{
+        display: flex;
+        flex-direction: column;
+        margin-left: 130px;
+    }
+
+    .afi_info p{
+        font-size: 17px;
+        margin-left: 10px;
+        text-align: center;
+    }
+
+    .afi_info h3{
+        text-align: center;
+    }
+    .button_afi{
+        margin-left: 15px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .afi_perfil{
+        display: flex;
+        flex-direction: column;
+        margin-left: 50px;
+        align-items: center;
+    }
+
+    .afi_info {
+        text-align: center;
+        margin-left: -100px;
+    }
+    .afi_perfil img{
+        margin-left: -100px;
+    
+    }
+
+    .afi_perfil link{
+        text-align: center;
+    }
+}
