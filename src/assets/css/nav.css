@@ -52,7 +52,24 @@
 
 .links_nav li{
     list-style: none;
-    height: fit-content;
+    display: flex;
+    flex-flow: row nowrap;
+
+}
+
+.links_navv li{
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.links_navv{
+    display: flex;
+    gap: 30px;
+    height: 70px;
+    align-items: center;
+    padding: 0;
+    margin: 0;
 }
 
 .link_nav .active{
@@ -71,4 +88,51 @@
 }
 
 
+@media (max-width: 768px) {
+    .links_navv{
+        display: none;
+    }
+    
+    .links_nav {
+        transition: max-height 0.7s ease-in-out;
+        flex-flow: column nowrap;
+        background-color: #D65886;
+        opacity: 0.9;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 300px;
+        padding-top: 3.5rem;
+        transition: transform 0.3s ease-in-out;
+        z-index: 20;
+        padding-left: 20px;
+    }
+    .link_{
+        color: white;
+    }
+}
+
+@media (min-width: 768px) {
+    .Burguer{
+        display: none;
+    }    
+}
+.Hamburguesa{
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 20;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+}
+
+.Hamburguesa div{
+    width: 2rem;
+    height: 0.25rem;
+    background-color: black;
+}
 

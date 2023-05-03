@@ -5,7 +5,16 @@
     width: 100%;
 }
 
+.img_degradadov{
+    display: flex;
+}
+
+.img_degradadon{
+    display: none;
+}
+
 .degradado img{
+    max-width: 100%;
     width: 698px;
 }
 
@@ -26,12 +35,12 @@
     color:white;
     font-style: normal;
     font-weight: 500;
-    font-size: 32px;
+    font-size: 2.3vw;
     line-height: 94.02%;
     width: 526px;
     height: 95px;
     text-transform: uppercase;
-    padding-left: 50px;
+    padding-left: 5vw;
 }
 
 
@@ -42,12 +51,13 @@
 .fortalecimientos h2{
     text-align: end;
     text-transform: uppercase;
+    font-size: 2.5vw;
     font-weight: 700;
     line-height: 94.02%;
 }
 
 .fortalecimientos p{
-    font-size: 32px;
+    font-size: 2.2vw;
     text-align: end;
     
     padding: 10px 0;
@@ -114,4 +124,91 @@
     margin-top: 80px;
 }
 
+.fortalecimientoresponsivo{
+    display: none;
+}
 
+@media (max-widht:1200px) {
+    .fortalecimiento img{
+        width: 80%;
+    }
+
+}
+
+@media (max-width: 770px) {
+    .fortalecimiento{
+        display: none;
+    }
+
+    .fortalecimientoresponsivo{
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 10vw;
+    }
+
+    .fortalecimientoresponsivo h2{
+        text-align: center;
+        font-size: 6vw;
+        margin-bottom: 20px;
+    }
+    .caja p:hover{
+        color: #D65886;
+        cursor: pointer;
+        transform: translateX(20%);
+    }
+
+    .caja p{
+        padding: 10px 0;
+        transition: all 0.2s ease-in ;
+    }
+
+    .caja p:last-of-type{
+        border: none;
+        padding-bottom: 0;
+    }
+    .img_degradadov .caja{
+        border-bottom: none;
+    }
+    .nombre{
+        height: 100%;
+        width: 100%;
+        position: -webkit-sticky;
+    }
+    .degradado{
+        margin: 10px;
+        display: block;
+    }
+    .degradado img{
+        border-radius: 15px 15px 15px 15px;
+    }
+}
+.degradadoresponsivo{
+    position: relative;
+    transition: max-height 0.7s ease-in-out;
+}
+
+.nombrer{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 57.14%, rgba(0, 0, 0, 0.24) 63.96%, rgba(0, 0, 0, 0.363343) 70.05%, rgba(0, 0, 0, 0.47) 79.06%, rgba(0, 0, 0, 0.56) 87.09%, #000000 98.44%);
+
+}
+
+
+.nombrer p{
+    color:white;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.3vw;
+    line-height: 94.02%;
+    width: 100%;
+    height: auto;
+    text-transform: uppercase;
+    padding-left: 5vw;
+}
