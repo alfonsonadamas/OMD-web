@@ -52,3 +52,64 @@
 .butn:hover{
     color: white;
 }
+
+@media screen and (max-width: 1200px) {
+   .tittle{
+    font-size: 50px;
+    margin-left: -300px;
+    flex-wrap: wrap;
+   }
+
+   .description{
+    margin-left: -300px;
+    flex-wrap: wrap;
+    max-width: 3500px;
+   }
+
+   .butn{
+    margin: -300px;
+    font-size: 15px;
+   }
+   .butn:active{
+    background-color: #eea6c0;
+   }
+
+   .slider_item img{
+    height: 700px;
+    width: auto;
+    
+   }
+}
+
+
+ @media screen and (max-width: 500px) {
+    .tittle{
+     font-size: 37px;
+     margin-left: -400px;
+     flex-wrap: wrap;
+    }
+    .description{
+     margin-left: -400px;
+     flex-wrap: wrap;
+     font-size: 15px;
+     max-width: 200px;
+     margin-bottom: 30px;
+     margin-top: 20px;
+    }
+ 
+    .butn{
+     margin: -400px;
+     font-size: 15px;
+     margin-top: 10px;
+    }
+    .butn:active{
+     background-color: #eea6c0;
+    }
+ 
+    .slider_item img{
+     height: 700px;
+     width: auto;
+    }
+
+
+ }
