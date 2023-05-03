@@ -10,15 +10,30 @@
   width: 50%;
 }
 
-.body_img img{
-    width: 543px;
-    height: 491px;
+.body_img img {
+  width: 543px;
+  height: 491px;
 }
 
 .body_info {
   text-align: justify;
   margin-right: 60px;
   padding: 0 40px;
+}
+
+.btn_body {
+  background-color: #d65886;
+  color: white;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 15px;
+  transition: all 0.2s ease-in;
+  text-decoration: none;
+  margin-top: 30px;
+}
+
+.btn_body:hover {
+  color: white;
 }
 
 .body_info p {
@@ -37,130 +52,130 @@
   font-size: 20px;
 }
 
-.cinta{
-    width: 100%;
-    background-color: #5DC1B9;
-    margin-top: 50px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 0;
-    margin-bottom: 60px;
+.cinta {
+  width: 100%;
+  background-color: #5dc1b9;
+  margin-top: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+  margin-bottom: 60px;
 }
 
-.cinta h3{
-    color: white;
-    font-style: italic;
-    font-size: 2vw;
+.cinta h3 {
+  color: white;
+  font-style: italic;
+  font-size: 2vw;
 }
 
-.cinta p{
-    color: white;
-    font-size: 1.5vw;
+.cinta p {
+  color: white;
+  font-size: 1.5vw;
 }
 
-.botoncinta{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.botoncinta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.btoncinta{
-    border: none;
-    border-radius: 30px;
-    background-color: #D65886;
-    padding: 8px 60px;
-    font-weight: bolder;
-    transition: all 0.2s ease-in;
-    color: white;
-    font-size: 1.5vw;
+.btoncinta {
+  border: none;
+  border-radius: 30px;
+  background-color: #d65886;
+  padding: 8px 60px;
+  font-weight: bolder;
+  transition: all 0.2s ease-in;
+  color: white;
+  font-size: 1.5vw;
 }
 
-.btoncinta:hover{
-    background-color: #F1BA0A;
+.btoncinta:hover {
+  background-color: #f1ba0a;
 }
 
 @media (max-width: 1200px) {
-    .btoncinta{
-        font-size: 12px;
-    }
-    .botoncinta button{
-        margin: 0;
-    }
-    .botoncinta{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-    .cinta h3{
-        color: white;
-        font-style: italic;
-        font-size: 20px;
-    }
-    
-    .cinta p{
-        color: white;
-        font-size: 15px;
-    }
+  .btoncinta {
+    font-size: 12px;
+  }
+  .botoncinta button {
+    margin: 0;
+  }
+  .botoncinta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .cinta h3 {
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+  }
+
+  .cinta p {
+    color: white;
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-width: 1285px) {
-    .body{
-        flex-direction: column;
-        /* flex-wrap: wrap; */
-        /* padding: 0px 0px; */
-    }
-    .body_info{
-        margin-right: 0px;
-        text-align: center;
-        padding:auto;
-    }
-    .body_info button{
-        margin: 0;
-    }
-    .body_info h2{
-        text-transform: uppercase;
-        text-align: center;
-        width: auto;
-        margin-bottom: 30px;
-        font-weight: bolder;
-    }
+  .body {
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* padding: 0px 0px; */
+  }
+  .body_info {
+    margin-right: 0px;
+    text-align: center;
+    padding: auto;
+  }
+  .body_info button {
+    margin: 0;
+  }
+  .body_info h2 {
+    text-transform: uppercase;
+    text-align: center;
+    width: auto;
+    margin-bottom: 30px;
+    font-weight: bolder;
+  }
 
-    .body_img img{
-        padding-top: 30px;
-        width: 543px;
-        height: auto;
-    }
+  .body_img img {
+    padding-top: 30px;
+    width: 543px;
+    height: auto;
+  }
 
-    .body_img{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .body_img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 742px) {
-    .body_img img{
-        width: 100%;
-        height: auto;
-    }
-    .body_img{
-        width: auto;
-    }
+  .body_img img {
+    width: 100%;
+    height: auto;
+  }
+  .body_img {
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 627px) {
-    .body_info h2{
-        font-size: auto;
-    }
+  .body_info h2 {
+    font-size: auto;
+  }
 
-    .body{
-        padding:20px 30px;
-        width: auto;
-    }
+  .body {
+    padding: 20px 30px;
+    width: auto;
+  }
 }
