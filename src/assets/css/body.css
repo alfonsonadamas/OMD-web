@@ -94,7 +94,7 @@
         font-size: 12px;
     }
     .botoncinta button{
-        margin-left: 200px;
+        margin: 0;
     }
     .botoncinta{
         display: flex;

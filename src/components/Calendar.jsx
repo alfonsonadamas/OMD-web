@@ -22,32 +22,40 @@ const Calendar = () =>{
             <h2>Proximos Eventos</h2>
             <div className={classlist ? 'events' : 'events active'} >
                 <div className="event" onClick={handdleToggle}>
-                    <div>
+                    <div >
                         <div className="date">
+
+                            <div className="linea">
                             <div className="number">
                                 <p>20</p>
                             </div>
                             <div className="day">
                                 <p>Mar</p>
                                 <p>Nov</p>
+                            </div>
                             </div>
                             <div className="eventName">
                                 <p>Conferencia sobre el salario</p>
                             </div>
                             
                         </div>
-                    </div>
-                    <button>Registrarme</button>
-                </div>
+                    
+
                 <div className="location">
                     <p>23 sept 2023, 19:00</p>
                     <p>Madrid, Avenida los Rosales, 122, 28021 Madrid, España</p>
+                </div>
+                </div>
+
+                <button className="boton">Registrarme</button>
+                
                 </div>
             </div>
             <div className={classlist2 ? 'events' : 'events active'} >
                 <div className="event" onClick={handdleToggle2}>
                     <div>
                         <div className="date">
+                        <div className="linea">
                             <div className="number">
                                 <p>20</p>
                             </div>
@@ -55,42 +63,56 @@ const Calendar = () =>{
                                 <p>Mar</p>
                                 <p>Nov</p>
                             </div>
+                            </div>
                             <div className="eventName">
                                 <p >Conferencia sobre el salario</p>
                             </div>
                             
                         </div>
+                    
+
+                    <div className="location">
+                        <p>23 sept 2023, 19:00</p>
+                        <p>Madrid, Avenida los Rosales, 122, 28021 Madrid, España</p>
                     </div>
+                    </div>
+
                     <button>Registrarme</button>
                 </div>
-                <div className="location">
-                    <p>23 sept 2023, 19:00</p>
-                    <p>Madrid, Avenida los Rosales, 122, 28021 Madrid, España</p>
-                </div>
+                
             </div>
             <div className={classlist3 ? 'events' : 'events active'} >
                 <div className="event" onClick={handdleToggle3}>
                     <div>
                         <div className="date">
+                            <div className="linea">
                             <div className="number">
                                 <p>20</p>
                             </div>
+                            
                             <div className="day">
                                 <p>Mar</p>
                                 <p>Nov</p>
                             </div>
+                            </div>
+                            
                             <div className="eventName">
                                 <p >Conferencia sobre el salario</p>
                             </div>
                             
                         </div>
+                    
+
+                    <div className="location">
+                        <p>23 sept 2023, 19:00</p>
+                        <p>Madrid, Avenida los Rosales, 122, 28021 Madrid, España</p>
                     </div>
+                    </div>
+
                     <button>Registrarme</button>
+                    
                 </div>
-                <div className="location">
-                    <p>23 sept 2023, 19:00</p>
-                    <p>Madrid, Avenida los Rosales, 122, 28021 Madrid, España</p>
-                </div>
+                
             </div>
         </div>
     )
