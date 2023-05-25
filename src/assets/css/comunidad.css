@@ -170,3 +170,38 @@
 .verde:hover{
     color: white;
 }
+
+
+@media (max-width: 500px) {
+
+    .banner_info h3{
+
+        margin-top: 70px;
+
+        font-size: 39px;
+    }
+
+    .banner_info p{
+        font-size: 20px;
+    }
+
+    .rosa{
+        font-size: 20px;
+        width: 280px;
+    }
+
+    .verde{
+        font-size: 20px;
+        width: 280px;
+    }
+    
+    .beneficios li{
+        font-size: 20px;
+    }
+
+    .beneficios{
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+
+}

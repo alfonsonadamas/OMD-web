@@ -1,22 +1,50 @@
-import '../assets/css/form.css'
+import { useState } from "react";
+import "../assets/css/form.css";
+import sendCustomEmail from "../config/sendCustomEmail";
 
 const Formulario = () => {
-    return(
-        <div className='contact_form'>
-            <div className='contact_tittle'>
-                <h2>Contacto</h2>
-            </div>
-            <form action="" method="POST" >
-                
-                <input type="text" name="name" id="usname" placeholder="Nombre"/>
-                <input type="text" name="lastname" id="lsname" placeholder="Apellidos"/>
-                <input type="text" name="email" id="email" placeholder="Email"/>
-                <input type="submit" name='submit' id='submit' placeholder='Enviar' />
-                
-            </form>
-        
-        </div>
-    )
-}
+  const [loading, setLoading] = useState(false);
+  const handlerSubmit = (e) => {
+    try {
+      e.preventDefault();
+      setLoading(true);
+      let nombre = e.target.nombre.value;
+      let asunto = e.target.asunto.value;
+      let email = e.target.email.value;
+      sendCustomEmail(email, asunto, nombre);
+      e.target.nombre.value = "";
+      e.target.asunto.value = "";
+      e.target.email.value = "";
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div className="contact_form">
+      <div className="contact_tittle">
+        <h2>Contacto</h2>
+      </div>
+      <form onSubmit={handlerSubmit}>
+        <input type="text" name="nombre" id="usname" placeholder="Nombre" />
+        <input type="text" name="asunto" id="lsname" placeholder="Asunto" />
+        <input type="text" name="email" id="email" placeholder="Email" />
+
+        {loading ? (
+          <button type="submit" name="submit" id="submit" disabled>
+            Enviando...
+          </button>
+        ) : (
+          <button type="submit" name="submit" id="submit">
+            Enviar
+          </button>
+        )}
+      </form>
+    </div>
+  );
+};
 
 export default Formulario;
