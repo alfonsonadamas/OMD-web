@@ -4,8 +4,9 @@ const Evento = (evento) =>{
     return(
       <>
         <div className="eventos" data-aos="fade-right">
-          <div>
-            <img src={evento.dirimg} alt='img' />
+        {/* <div className="eventos"> */}
+          <div class="eventos-img">
+            <img src={evento.dirimg}  alt='img' />
           </div>
           <div className="subevent">
             {/* creador y fecha */}
