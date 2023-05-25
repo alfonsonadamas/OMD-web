@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "../assets/css/eventos.css"
 
 const Evento = (evento) =>{
@@ -24,7 +25,7 @@ const Evento = (evento) =>{
                     <p>{evento.numComentarios} comentarios</p>
                 </div>
                 <div className="like">
-                    <p>{evento.numlikes}</p>
+                    <Link to='/noticia' >{evento.numlikes}</Link>
                     <img src='\src\assets\img\Corazon.png' alt='like' />
                 </div>
               </div>
@@ -35,4 +36,4 @@ const Evento = (evento) =>{
     )
   }
   
-  export default Evento
+  export default Evento;

@@ -18,6 +18,7 @@ import RegistroExisto from "../pages/RegistroExito";
 import VerificacionCorreo from "../pages/VerificacionCorreo";
 import VerificacionSesion from "../pages/VerificacionSesion";
 import Bienvenida from "../pages/Bienvenida";
+import Noticia from "../pages/Noticia";
 
 export const router = createBrowserRouter([
   {
@@ -109,6 +110,10 @@ export const router = createBrowserRouter([
             element: <Bienvenida />,
           },
         ],
+      },
+      {
+        path: "/noticia",
+        element: <Noticia />,
       },
     ],
   },

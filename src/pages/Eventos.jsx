@@ -77,4 +77,4 @@ const Eventos = () => {
     )
 }
 
-export default Eventos
+export default Eventos;
