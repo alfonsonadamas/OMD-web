@@ -18,10 +18,14 @@ import RegistroExisto from "../pages/RegistroExito";
 import VerificacionCorreo from "../pages/VerificacionCorreo";
 import VerificacionSesion from "../pages/VerificacionSesion";
 import Bienvenida from "../pages/Bienvenida";
+
 import EditarPerfil from "../pages/EditarPerfil";
 import DocumentoPerfil from "../components/DocumentoPerfil";
 import RegistrarEmpresa from "../pages/EditarPerfil";
 import RegistroCompania from "../pages/RegistrarCompania";
+=======
+import Noticia from "../pages/Noticia";
+
 
 export const router = createBrowserRouter([
   {
@@ -115,6 +119,7 @@ export const router = createBrowserRouter([
         ],
       },
       {
+
         path: "/editarPerfil",
         element: <LayoutPrivate />,
         children: [
@@ -137,12 +142,12 @@ export const router = createBrowserRouter([
       {
         path: "/document/:name/:apellidoP/:apellidoM/:email/:fechaNacimiento",
         element: <DocumentoPerfil />,
-        // children: [
-        //   {
-        //     index: true,
-        //     element: <DocumentoPerfil />,
-        //   },
-        // ],
+        
+},
+  {
+        path: "/noticia",
+        element: <Noticia />,
+
       },
     ],
   },

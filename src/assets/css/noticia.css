@@ -1,0 +1,140 @@
+.contenedorN {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+
+.EncLinks span {
+  color: #f1ba0a;
+}
+
+.EncLinks {
+  margin: 40px 0 0 40px;
+}
+
+.noticia {
+  text-decoration: none;
+  color: black;
+}
+
+.noticia:hover {
+  color: #d65886;
+}
+
+.contenedorNoticia {
+  width: 100%;
+  padding: 20px 40px 40px 40px;
+}
+
+.contenedorNoticia h2 {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.contenedorNoticia img {
+  width: 100%;
+  height: 600px;
+}
+
+.usuarioc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.usuarioc p {
+  margin: 0;
+}
+
+.usuarioc img {
+  margin-right: 10px;
+  width: 60px;
+  height: auto;
+}
+
+.NotCont p {
+  text-align: justify;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.NotCont {
+  border-bottom: black solid 1px;
+}
+
+.Interacciones {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Interacciones img {
+  margin-top: 3px;
+  margin-left: 5px;
+  width: 100%;
+  height: 18px;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.Like {
+  display: flex;
+  flex-direction: row;
+}
+
+.Formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+.AgregarCom {
+  margin-top: 50px;
+}
+
+.Formulario textarea {
+  width: 100%;
+  height: 100px;
+  resize: none;
+  padding: 10px;
+}
+
+.Botones {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.Botones input {
+  margin: 10px;
+}
+
+#Publicar {
+  background-color: #d65886;
+  border: none;
+  color: white;
+  width: 90px;
+  margin-bottom: 2px;
+}
+
+.Comentarios {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 5vw;
+  margin-bottom: 50px;
+  border-bottom: 1px solid black;
+}
+
+.Comentarios img {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.Comentario p {
+  text-align: justify;
+}
