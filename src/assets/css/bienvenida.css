@@ -25,8 +25,12 @@
   margin-top: 20px;
 }
 
-.bienvenida_tarjeta img {
-  width: 350px;
+.bienvenida_tarjeta_imagen{
+  width: 275px;
+  height: auto;
+}
+.bienvenida_tarjeta_imagen img {
+  width: 100%;
   height: auto;
   margin-bottom: 30px;
 }

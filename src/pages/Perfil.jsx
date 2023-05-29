@@ -37,7 +37,6 @@ const Perfil = () => {
   useEffect(() => {
     getUser();
     getCompany();
-    console.log(auth.currentUser.photoURL);
   }, []);
 
   const handleLogout = async () => {
