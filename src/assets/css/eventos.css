@@ -1,232 +1,235 @@
-.cuadro-evento{
-    background-color: #5DC1B9;
-    padding: 1px;
-    color: white;
+.cuadro-evento {
+  background-color: #5dc1b9;
+  padding: 1px;
+  color: white;
 }
 
-.cuadro-evento h2{
-    text-align: center;
-    font-size: 60px;
-    text-transform: uppercase;
-    margin: 30px 0;
+.cuadro-evento h2 {
+  text-align: center;
+  font-size: 60px;
+  text-transform: uppercase;
+  margin: 30px 0;
 }
 
-.cuadro-evento h2 span{
-    color: #F1BA0A;
+.cuadro-evento h2 span {
+  color: #f1ba0a;
 }
 
-.cuadro-capacitacion{
-    background-color: #D65886;
-    padding: 1px;
-    color: white;
+.cuadro-capacitacion {
+  background-color: #d65886;
+  padding: 1px;
+  color: white;
 }
 
-.cuadro-capacitacion h2{
-    text-align: center;
-    font-size: 60px;
-    text-transform: uppercase;
-    margin: 30px 0;
+.cuadro-capacitacion h2 {
+  text-align: center;
+  font-size: 60px;
+  text-transform: uppercase;
+  margin: 30px 0;
 }
 
-.cuadro-capacitacion h2 span{
-    color: #F1BA0A;
+.cuadro-capacitacion h2 span {
+  color: #f1ba0a;
 }
 
-.galeria-titulo{
-    text-align: center;
-    font-size: 30px;
-    text-transform: uppercase;
-    margin: 30px 0;
-    text-decoration: underline;
+.galeria-titulo {
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin: 30px 0;
+  text-decoration: underline;
 }
 
-.eventos{
-    display: flex;
-    margin: 0px 60px;
-    padding-top: 20px;
-    /* align-items: center; */
+.eventos {
+  display: flex;
+  margin: 0px 60px;
+  padding-top: 20px;
+  /* align-items: center; */
 }
-  
-.eventos-img{
-    /* width: 572px; */
-    width: 1350px;
-    height: 401px;
-    /* width: auto;
+
+.eventos-img {
+  /* width: 572px; */
+  width: 1350px;
+  height: 401px;
+  /* width: auto;
     height: auto; */
-    object-fit: cover;
+  object-fit: cover;
 }
 
-.subevent{
-    margin: 30px;
+.subevent {
+  margin: 30px;
 }
 
-.subevent h1{
-    margin: 0px;
+.subevent h1 {
+  margin: 0px;
 }
 
-.subevent p{
-    margin: 10px 0 10px;
-    text-align: justify;
+.subevent p {
+  margin: 10px 0 10px;
+  text-align: justify;
 }
 
-.creador{
-    display: flex;
-    /* align-items: center; */
+.creador {
+  display: flex;
+  /* align-items: center; */
 }
 
-.creador img{
-    margin-right: 10px;
-    /* width: 5%; */
-    width: 35px;
-    height: auto;
+.creador img {
+  margin-right: 10px;
+  /* width: 5%; */
+  width: 35px;
+  height: auto;
 }
 
-.descipcion{
-    /* margin: 5px 0px; */
-    margin: 5px 0px 160px;
-    /* height: 280px; */
+.descipcion {
+  /* margin: 5px 0px; */
+  margin: 5px 0px 160px;
+  /* height: 280px; */
 }
 
-.comentarios{
-    border-top: black 1px solid;
-    display: flex;
-    justify-content: space-between;
-    
-}
-.coment p{
-    margin-left: 10px;
+.link_evento {
+  color: black;
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: 600;
+  transition: all 0.2s ease-in;
 }
 
-.coment p:hover{
-    border-bottom: 1px black solid;
-    cursor: pointer;
+.link_evento:hover {
+  color: #f1ba0a;
+}
+
+.comentarios {
+  border-top: black 1px solid;
+  display: flex;
+  justify-content: space-between;
+}
+.coment p {
+  margin-left: 10px;
 }
 
 .like {
-    display: flex;
-    align-items: center;
-    padding-right: 10px;
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
 }
-.like img{
-    margin-left: 10px;
-    width: 15px;
-    height: auto;
+.like img {
+  margin-left: 10px;
+  width: 15px;
+  height: auto;
 }
 
 @media (max-width: 1324px) {
-    .descipcion {
-        margin: 5px 0px 140px;
-    }
+  .descipcion {
+    margin: 5px 0px 140px;
+  }
 }
 
 @media (max-width: 1280px) {
-    .descipcion {
-        margin: 5px 0px 120px;
-    }
+  .descipcion {
+    margin: 5px 0px 120px;
+  }
 }
 
 @media (max-width: 1252px) {
-    .descipcion {
-        margin: 5px 0px 100px;
-    }
+  .descipcion {
+    margin: 5px 0px 100px;
+  }
 }
 
 @media (max-width: 1216px) {
-    .descipcion {
-        margin: 5px 0px 80px;
-    }
+  .descipcion {
+    margin: 5px 0px 80px;
+  }
 }
 
 @media (max-width: 1172px) {
-    .descipcion {
-        margin: 5px 0px 60px;
-    }
+  .descipcion {
+    margin: 5px 0px 60px;
+  }
 }
 
 @media (max-width: 1100px) {
-    .descipcion {
-        margin: 5px 0px 40px;
-    }
+  .descipcion {
+    margin: 5px 0px 40px;
+  }
 }
 @media (max-width: 1019px) {
-    .descipcion {
-        margin:0px 0px 0px;
-    }
-} 
+  .descipcion {
+    margin: 0px 0px 0px;
+  }
+}
 
 @media (max-width: 1013px) {
-    .eventos{
-        flex-direction: column;
-        margin: 0px;
-    }
-    .descipcion{
-        padding-bottom: 20px;
-    }
-    .subevent{
-        margin: 20px;
-    }
+  .eventos {
+    flex-direction: column;
+    margin: 0px;
+  }
+  .descipcion {
+    padding-bottom: 20px;
+  }
+  .subevent {
+    margin: 20px;
+  }
 
-    .eventos-img {
-        width:auto;
-        height:auto;
-    }
+  .eventos-img {
+    width: auto;
+    height: auto;
+  }
 }
 
 @media (max-width: 355px) {
-    .creador p{
-        font-size: 15px;
-    }
+  .creador p {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 339px) {
-    .creador p {
-        font-size: 14px;
-    }
-    .creador img {
-        width: 25px;
-    }
+  .creador p {
+    font-size: 14px;
+  }
+  .creador img {
+    width: 25px;
+  }
 }
 
 @media (max-width: 339px) {
-    .creador p {
-        font-size: 12px;
-    }
+  .creador p {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 272px) {
-    .creador p {
-        font-size: 11px;
-    }
-
-    
+  .creador p {
+    font-size: 11px;
+  }
 }
 
-@media (max-width: 830px){
-    .cuadro-capacitacion h2{
-        font-size: 50px;
-    }
+@media (max-width: 830px) {
+  .cuadro-capacitacion h2 {
+    font-size: 50px;
+  }
 }
 @media (max-width: 610px) {
-    .cuadro-evento h2{
-        font-size: 50px;
-    }
+  .cuadro-evento h2 {
+    font-size: 50px;
+  }
 }
 
 @media (max-width: 428px) {
-    .cuadro-capacitacion h2{
-        font-size: 40px;
-    }
+  .cuadro-capacitacion h2 {
+    font-size: 40px;
+  }
 }
 
 @media (max-width: 343px) {
-    .cuadro-capacitacion h2{
-        font-size: 30px;
-    }
+  .cuadro-capacitacion h2 {
+    font-size: 30px;
+  }
 }
 
 @media (max-width: 300px) {
-    .cuadro-evento h2{
-        font-size: 40px;
-    }
+  .cuadro-evento h2 {
+    font-size: 40px;
+  }
 }
-

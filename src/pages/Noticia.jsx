@@ -1,21 +1,11 @@
-import logoOMD from '../assets/img/OMD_logo.jpg'
-import perfil from '../assets/img/perfil.jpg'
+import NoticiaI from "../components/Noticia";
 
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import NoticiaI from '../components/Noticia';
-
-const Noticia = () =>{
-    return (
-        <div>
-            <Navbar 
-                img = {logoOMD}
-                perfil = {perfil}
-            ></Navbar>
-            <NoticiaI></NoticiaI>
-            <Footer></Footer>
-        </div>
-    )
-}
+const Noticia = () => {
+  return (
+    <div>
+      <NoticiaI></NoticiaI>
+    </div>
+  );
+};
 
 export default Noticia;
