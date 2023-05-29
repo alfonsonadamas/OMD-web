@@ -38,7 +38,7 @@ const RegistroUsuario = () => {
     <div>
       <div data-aos="fade-up" className="register_form">
         <div className="register_img">
-          <img src="../src/assets/img/OMD_logo(copy).png" alt="" />
+          <img src="../src/assets/img/OMD_logo.png" alt="" />
         </div>
 
         <div className="register_tittle">

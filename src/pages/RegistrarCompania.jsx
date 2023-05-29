@@ -1,15 +1,18 @@
 import Footer from "../components/Footer";
 import "../assets/css/login.css";
-import { auth, logout, register } from "../config/firebase";
+import { auth, logout, register, storage } from "../config/firebase";
 import { useNavigate } from "react-router-dom";
 import { sendEmailVerification } from "firebase/auth";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import { useFirestore } from "../config/useFirestore";
+import { useState } from "react";
+import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 
 const RegistroCompania = () => {
   const navigate = useNavigate();
   const { addCompany } = useFirestore();
+  const [file, setFile] = useState("");
 
   const onSubmit = async (
     { nombreCompañia, correoEmpresa, sobreEmpresa, telefono, ubicacion },
@@ -18,12 +21,19 @@ const RegistroCompania = () => {
   ) => {
     try {
       setSubmitting(true);
+      const storageRef = ref(
+        storage,
+        `emprendimientos/${auth.currentUser.uid}`
+      );
+      await uploadBytes(storageRef, file);
+      const url = await getDownloadURL(storageRef);
       addCompany(
         nombreCompañia,
         correoEmpresa,
         sobreEmpresa,
         telefono,
-        ubicacion
+        ubicacion,
+        url
       );
       navigate("/perfil");
       console.log("enviando form");
@@ -46,7 +56,7 @@ const RegistroCompania = () => {
     <div>
       <div data-aos="fade-up" className="register_form">
         <div className="register_img">
-          <img src="../src/assets/img/OMD_logo(copy).png" alt="" />
+          <img src="../src/assets/img/OMD_logo.png" alt="" />
         </div>
 
         <div className="register_tittle">
@@ -136,12 +146,21 @@ const RegistroCompania = () => {
                 {errors.ubicacion && touched.ubicacion && errors.ubicacion}
               </p>
 
+              <div className="registroLogo">
+                <h3>Logo</h3>
+                <input
+                  type="file"
+                  required
+                  onChange={(e) => setFile(e.target.files[0])}
+                />
+              </div>
+
               <div className="input_form">
                 <textarea
                   name="sobreEmpresa"
                   id=""
                   cols="55"
-                  rows="10"
+                  rows="5"
                   placeholder="Cuentanos acerca de tu empresa"
                   value={values.sobreEmpresa}
                   onChange={handleChange}

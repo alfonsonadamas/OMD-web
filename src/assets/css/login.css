@@ -1,180 +1,246 @@
-@import url('https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap");
 
-.login{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin:15px 0;
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
 }
 
-.form_login{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 493px;
-    margin: 90px 0;
-    margin-right: 70px;
-    
+.form_login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 493px;
+  margin: 90px 0;
+  /* margin-right: 70px; */
 }
 
-.form_login img{
-    width: 309px;
-    height: auto;
-    margin-bottom: 30px;
+.form_login img {
+  width: 309px;
+  height: auto;
+  margin-bottom: 30px;
 }
 
-.form_login h2{
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: 80px;
+.form_login h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 80px;
 }
 
-.form_login form{
-    display: flex;
-    flex-direction: column;
-    width: 393px;
+.form_login form {
+  display: flex;
+  flex-direction: column;
+  width: 393px;
 }
 
-.button_sbt{
-    background-color: #D65886;
-    color: white;
-    font-family: 'Readex Pro', sans-serif;
-    border: none;
-    padding: 10px;
-    border-radius: 15px;
+.button_sbt {
+  background-color: #d65886;
+  color: white;
+  font-family: "Readex Pro", sans-serif;
+  border: none;
+  padding: 10px;
+  border-radius: 15px;
 }
 
-.button_sbt:disabled{
-    background-color: #cc89a2;
-    color: white;
-    font-family: 'Readex Pro', sans-serif;
-    border: none;
-    padding: 10px;
-    border-radius: 15px;
+.button_sbt:disabled {
+  background-color: #cc89a2;
+  color: white;
+  font-family: "Readex Pro", sans-serif;
+  border: none;
+  padding: 10px;
+  border-radius: 15px;
 }
 
-.input_form{
-    position: relative;
-    
+.input_form {
+  position: relative;
 }
 
-.input_form input{
-    box-sizing: border-box;
-    padding: 5px;
-    text-align: center;
-    font-family: 'Readex Pro', sans-serif;
-    width: 393px;
-    border-radius: 15px;
-    border: 2px solid black;
-    margin-bottom: 20px;
+.input_form:first-child {
+  margin-top: 10px;
 }
 
-.input_icon img{
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    left: 12px;
-    top: 25%;
-    transform: translateY(-50%);
-    margin: 0;
+.input_form input {
+  box-sizing: border-box;
+  padding: 5px;
+  text-align: center;
+  font-family: "Readex Pro", sans-serif;
+  width: 393px;
+  border-radius: 15px;
+  border: 2px solid black;
+  margin-bottom: 20px;
 }
 
-.input_icon img:last-of-type{
-    top: 30%;
+.input_form textarea {
+  padding: 10px;
+  width: 393px;
 }
 
+.input_icon img {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 12px;
+  top: 25%;
+  transform: translateY(-50%);
+  margin: 0;
+}
+
+.input_icon img:last-of-type {
+  top: 30%;
+}
+
+.login_img{
+  width: 450px;
+  height: auto;
+  margin: 0 40px;
+}
 .login_img img{
-    width: 450px;
+    width: 100%;
     height: auto;
     border-radius: 22px;
 }
 
-.fg_password{
-    text-align: end;
-    color: #F1BA0A;
-    text-decoration: none;
-    width: 100%;
-    margin-bottom: 15px;
-    font-weight: 500;
+.fg_password {
+  text-align: end;
+  color: #f1ba0a;
+  text-decoration: none;
+  width: 100%;
+  margin-bottom: 15px;
+  font-weight: 500;
 }
 
-.fg_password:hover{
-    color: #F1BA0A;
+.fg_password:hover {
+  color: #f1ba0a;
 }
 
-.link_register{
-    margin-top: 10px;
-    font-weight: 500;
+.link_register {
+  margin-top: 10px;
+  font-weight: 500;
 }
 
-.register{
-    color: #F1BA0A;
-    text-decoration: none;
-    
+.register {
+  color: #f1ba0a;
+  text-decoration: none;
 }
 
-.register:hover{
-    color: #F1BA0A;
+.register:hover {
+  color: #f1ba0a;
 }
 
-.register_form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.register_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 180px;
+  margin-top: 50px;
+}
+
+.register_img img {
+  width: 250px;
+  height: auto;
+}
+
+.button_sbt_register {
+  width: 100%;
+  background-color: #d65886;
+  color: white;
+  font-family: "Readex Pro", sans-serif;
+  border: none;
+  padding: 8px;
+  border-radius: 15px;
+}
+
+.button_sbt_register:disabled {
+  background-color: #cc89a2;
+  color: white;
+  font-family: "Readex Pro", sans-serif;
+  border: none;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.register_tittle h2 {
+  text-align: center;
+  color: #d65886;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.register_tittle h3 {
+  text-align: center;
+  font-weight: bolder;
+}
+
+.register_tittle p {
+  text-align: center;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.error {
+  color: red;
+  font-weight: bolder;
+  margin-top: 0px;
+  text-align: end;
+}
+
+@media (max-width: 1200px) {
+  button{
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 956px) {
+  .login_img {
+    display: none;
+  }
+}
+
+@media (max-width: 445px) {
+  .form_login img{
+    width: 277px;
+    margin-bottom: 10px;
+  }
+  .input_icon img{
+    width: 20px;
+  }
+  .form_login form{
     align-items: center;
-    margin-bottom: 180px;
-    margin-top: 50px;
-}
-
-
-.register_img img{
-    width: 250px;
-    height: auto;
-}
-
-.button_sbt_register{
-    width: 100%;
-    background-color: #D65886;
-    color: white;
-    font-family: 'Readex Pro', sans-serif;
-    border: none;
-    padding: 8px;
-    border-radius: 15px;
-}
-
-.button_sbt_register:disabled{
-    background-color: #cc89a2;
-    color: white;
-    font-family: 'Readex Pro', sans-serif;
-    border: none;
-    padding: 10px;
-    border-radius: 15px;
-}
-
-.register_tittle h2{
+    width: auto;
+  }
+  .input_form input{
+    width: 282px;
+  }
+  .fg_password{
     text-align: center;
-    color: #D65886;
-    font-weight: bold;
-    margin-bottom: 20px;
-    margin-top: 40px;
+  }
+  .button_sbt{
+    width: 282px;
+  }
 }
 
-.register_tittle h3{
-    text-align: center;
-    font-weight: bolder;
-}
+@media (max-width: 312px) {
+  .form_login img {
+    width: 243px;
+  }
 
-.register_tittle p{
-    text-align: center;
-    font-weight: bolder;
-    text-transform: uppercase;
-}
+  .input_icon img {
+    width: 20px;
+  }
 
-.error{
-    color: red;
-    font-weight: bolder;
-    margin-top: 0px;
-    text-align: end;
+  .input_form input {
+    width: 231px;
+  }
+
+  .button_sbt {
+    width: 231px;
+  }
+  .register_tittle h2{
+    font-size: 21px;
+  }
 }

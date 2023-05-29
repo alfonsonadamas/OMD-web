@@ -7,10 +7,12 @@ const Bienvenida = () => {
       <div className="bienvenida_tarjeta">
         <h2>BIENVENIDO</h2>
         <div className="sub">ㅤ</div>
-        <img src="../src/assets/img/OMD_blanco.png" alt="" />
+        <div className="bienvenida_tarjeta_imagen">
+          <img src="../src/assets/img/OMD_blanco.png" alt="" />
+        </div>
         <h3>Gracias por formar parte de nuestra organizacion</h3>
         <Link className="btn_bienvenida" to={"/login"}>
-          Iniciar sesion
+          Ver Perfil
         </Link>
       </div>
     </div>

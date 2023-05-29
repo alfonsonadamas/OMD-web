@@ -23,10 +23,8 @@ import EditarPerfil from "../pages/EditarPerfil";
 import DocumentoPerfil from "../components/DocumentoPerfil";
 import RegistrarEmpresa from "../pages/EditarPerfil";
 import RegistroCompania from "../pages/RegistrarCompania";
-
 import Noticia from "../pages/Noticia";
-import Capacitacion from "../pages/Capacitacion";
-
+import EditarEmpresa from "../pages/EditarEmpresa";
 
 export const router = createBrowserRouter([
   {
@@ -120,7 +118,6 @@ export const router = createBrowserRouter([
         ],
       },
       {
-
         path: "/editarPerfil",
         element: <LayoutPrivate />,
         children: [
@@ -141,14 +138,22 @@ export const router = createBrowserRouter([
         ],
       },
       {
+        path: "/editarEmpresa",
+        element: <LayoutPrivate />,
+        children: [
+          {
+            index: true,
+            element: <EditarEmpresa />,
+          },
+        ],
+      },
+      {
         path: "/document/:name/:apellidoP/:apellidoM/:email/:fechaNacimiento",
         element: <DocumentoPerfil />,
-        
-},
-  {
-        path: "/noticia",
+      },
+      {
+        path: "/noticia/:id_noticia",
         element: <Noticia />,
-
       },
 
       {

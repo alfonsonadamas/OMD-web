@@ -1,4 +1,4 @@
-import logoOMD from '../assets/img/OMD_logo.jpg'
+import logoOMD from '../assets/img/OMD_logo.png'
 import perfil from '../assets/img/perfil.jpg'
 // ----------------------------------------
 import Navbar from "../components/Navbar"

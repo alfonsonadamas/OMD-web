@@ -1,4 +1,4 @@
-import logoOMD from "../assets/img/OMD_logo.jpg";
+import logoOMD from "../assets/img/OMD_logo.png";
 import perfil from "../assets/img/perfil.jpg";
 // ----------------------------------------
 import Navbar from "../components/Navbar";
@@ -8,17 +8,30 @@ import Capacitacion from "../components/Capacitacion";
 import Galeria_hexagonal from "../components/Galeriahexagonal";
 import { useFirestore } from "../config/useFirestore";
 import { useEffect } from "react";
+import Spinner from "../components/Spinner";
 
 const descripcion =
   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ab qui in dolorum deserunt enim accusamus perspiciatis laudantium, doloremque, sed aspernatur ratione sequi pariatur quas dignissimos illum velit omnis vero?¡";
 
 const Eventos = () => {
-  const { data, error, loading, getNews } = useFirestore();
+  const {
+    data,
+    data2,
+    error,
+    loading,
+    getNews,
+    getTrainings,
+    coments,
+    getComents,
+  } = useFirestore();
   useEffect(() => {
     getNews();
+    getTrainings();
   }, []);
 
-  if (loading) return <p>Cargando Datos</p>;
+  let comentarios = 0;
+
+  if (loading) return <Spinner></Spinner>;
   if (error) return <p>{error}</p>;
 
   return (
@@ -30,7 +43,7 @@ const Eventos = () => {
         </h2>
       </div>
       {data.map((item) => (
-        <div>
+        <div key={item.id_noticia}>
           <Evento
             dirimg={item.imagen}
             creador={item.autor}
@@ -39,6 +52,7 @@ const Eventos = () => {
             descripcion={item.noticia}
             numComentarios={item.comentarios}
             numlikes={item.likes}
+            id_noticia={item.id_noticia}
           ></Evento>
         </div>
       ))}
@@ -48,24 +62,17 @@ const Eventos = () => {
           PROXIMAS<span> CAPACITACIONES</span>{" "}
         </h2>
       </div>
-      <Capacitacion
-        dirimg="\src\assets\img\Capacitacion1.jpg"
-        titulo="Capacitación 1"
-        descripcion={descripcion}
-        disponibles="5"
-      ></Capacitacion>
-      <Capacitacion
-        dirimg="\src\assets\img\Capacitacion2.jpg"
-        titulo="Capacitación 2"
-        descripcion={descripcion}
-        disponibles="6"
-      ></Capacitacion>
-      <Capacitacion
-        dirimg="\src\assets\img\Capacitacion3.jpg"
-        titulo="Capacitación 3"
-        descripcion={descripcion}
-        disponibles="7"
-      ></Capacitacion>
+      {data2.map((item) => (
+        <div key={item.nombre}>
+          <Capacitacion
+            dirimg={item.imagen}
+            titulo={item.nombre}
+            descripcion={item.descripcion}
+            disponibles={item.espaciosDisponibles}
+          ></Capacitacion>
+        </div>
+      ))}
+
       <h2 className="galeria-titulo">EL TRABAJO DE NUESTROS ESTUDIANTES</h2>
       <Galeria_hexagonal />
       <Footer />
