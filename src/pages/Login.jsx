@@ -63,7 +63,8 @@ const Login = () => {
       <div className="login" data-aos="fade-up">
         <div className="form_login">
           <Link to="/">
-            <img src="../src/assets/img/OMD_logo(copy).png" alt="" />
+            {/* <img src="../src/assets/img/OMD_logo(copy).png" alt="" /> */}
+            <img src="../src/assets/img/OMD_logo.png" alt="" />
           </Link>
           <h2>Iniciar Sesión</h2>
           <Formik

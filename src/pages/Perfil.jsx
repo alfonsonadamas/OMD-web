@@ -1,7 +1,7 @@
 import { db, login, logout } from "../config/firebase";
 import Navbar from "../components/Navbar";
 import "../assets/css/perfil.css";
-import logoOMD from "../assets/img/OMD_logo.jpg";
+import logoOMD from '../assets/img/OMD_logo.png'
 import perfil from "../assets/img/perfil.jpg";
 import Login from "../pages/Login";
 import { useContext, useEffect, useState } from "react";

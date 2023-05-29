@@ -21,7 +21,7 @@
 .form_login img{
     width: 309px;
     height: auto;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 
 .form_login h2{
@@ -85,8 +85,12 @@
     top: 30%;
 }
 
-.login_img img{
+.login_img{
     width: 450px;
+    height: auto;
+}
+.login_img img{
+    width: 100%;
     height: auto;
     border-radius: 22px;
 }
@@ -177,4 +181,57 @@
     font-weight: bolder;
     margin-top: 0px;
     text-align: end;
+}
+
+@media (max-width: 1200px) {
+    button {
+        margin-right: 0px;    
+    }
+}
+
+/* movil */
+@media (max-width: 1024px){
+    .login_img{
+        /* display: none; */
+        margin:0 20px;
+    }
+    .form_login{
+        margin-right: 0px;
+    }
+
+}
+
+@media (max-width: 900px){
+    .login_img{
+        display: none;
+    }
+}
+
+@media (max-width:448px){
+    .fg_password{
+        text-align: center;
+    }
+    .form_login form{
+        align-items: center;
+        width: auto;
+    }
+    .input_form input{
+        width: 249px;
+    }
+    .button_sbt{
+        width: 249px;
+    }
+}
+
+@media (max-width:352px) {
+    .form_login img{
+        width: 249px;
+    }
+    .input_icon img{
+        width: 20px;
+        top: 25%;
+    }
+    .register_tittle h2{
+        font-size: 21px;
+    }
 }
