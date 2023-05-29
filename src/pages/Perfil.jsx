@@ -1,4 +1,4 @@
-import { db, login, logout } from "../config/firebase";
+import { auth, db, login, logout } from "../config/firebase";
 import Navbar from "../components/Navbar";
 import "../assets/css/perfil.css";
 import logoOMD from '../assets/img/OMD_logo.png'
@@ -37,6 +37,7 @@ const Perfil = () => {
   useEffect(() => {
     getUser();
     getCompany();
+    console.log(auth.currentUser.photoURL);
   }, []);
 
   const handleLogout = async () => {
@@ -50,19 +51,6 @@ const Perfil = () => {
   if (!user) {
     return <Login />;
   }
-
-  const MyDocument = () => {
-    return (
-      <PDF
-        logo={logoOMD}
-        name="Alejandra"
-        subnameM="Chavez"
-        subnameP="Macías"
-        email="Ale_CM@gmail.com"
-        birthday="24/04/2001"
-      ></PDF>
-    );
-  };
 
   if (loading) return <Spinner></Spinner>;
   if (error) return <p>{error}</p>;
@@ -82,7 +70,11 @@ const Perfil = () => {
             </div>
             <div className="info_general">
               <div className="foto_perfil">
-                <img src="../src/assets/img/perfil.png" alt="" />
+                {auth.currentUser.photoURL == null ? (
+                  <img src="../assets/img/perfil.png" alt="" />
+                ) : (
+                  <img src={auth.currentUser.photoURL} alt="" />
+                )}
 
                 <div>
                   <button onClick={handleShow}>Generar QR</button>
@@ -138,38 +130,44 @@ const Perfil = () => {
                 </h2>
               </div>
               {existCompany ? (
-                <div className="info_general">
-                  <div className="foto_perfil">
-                    <img src="../src/assets/img/perfil.png" alt="" />
-                  </div>
-                  <div className="borde"></div>
-                  <div className="info_perfil">
-                    {dataCompany.map((company) => (
-                      <div key={company.id}>
-                        <p>
-                          Nombre: <span>{company.nombreCompañia}</span>{" "}
-                        </p>
-                        <p>
-                          Apellido Paterno: <span>{company.ubicacion}</span>
-                        </p>
-                        <p>
-                          Apellido Materno: <span>{company.telefono}</span>
-                        </p>
-                        <p>
-                          Correo Electronico:{" "}
-                          <span>{company.correoEmpresa}</span>
-                        </p>
-                        <p>
-                          Fecha de Nacimiento: <span>{company.ubicacion}</span>
-                        </p>
+                <div>
+                  {dataCompany.map((company) => (
+                    <div className="info_general">
+                      <div className="foto_perfil">
+                        <img src={company.logo} alt="" />
                       </div>
-                    ))}
+                      <div className="borde"></div>
+                      <div className="info_perfil">
+                        <div key={company.id}>
+                          <p>
+                            Nombre: <span>{company.nombreCompañia}</span>{" "}
+                          </p>
+                          <p>
+                            Ubicación: <span>{company.ubicacion}</span>
+                          </p>
+                          <p>
+                            Telefono: <span>{company.telefono}</span>
+                          </p>
+                          <p>
+                            Correo Electronico:{" "}
+                            <span>{company.correoEmpresa}</span>
+                          </p>
+                          <p>
+                            Sobre la empresa:{" "}
+                            <span>{company.sobreEmpresa}</span>
+                          </p>
+                        </div>
 
-                    {/* <button>Editar</button> */}
-                    <Link to={"/editarPerfil"} className="btn_editar">
-                      Editar
-                    </Link>
-                  </div>
+                        {/* <button>Editar</button> */}
+                        <Link
+                          to={"/editarEmpresa"}
+                          className="btn_editarEmpresa"
+                        >
+                          Editar
+                        </Link>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               ) : (
                 <div className="registroEmpresa">

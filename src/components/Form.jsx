@@ -30,7 +30,7 @@ const Formulario = () => {
       </div>
       <form onSubmit={handlerSubmit}>
         <input type="text" name="nombre" id="usname" placeholder="Nombre" />
-        <input type="text" name="asunto" id="lsname" placeholder="Asunto" />
+        <input type="text" name="asunto" id="lsname" placeholder="Telefono" />
         <input type="text" name="email" id="email" placeholder="Email" />
 
         {loading ? (

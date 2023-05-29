@@ -7,9 +7,16 @@ import '../assets/css/Galeria.css'
 const GaleriaEnc = () => {
     return(
         <div className="Cont">
-            <img className="ImgLogo" src={OMDLogo} alt="" />
-            <span></span>
-            <h2>"Se triunfa con lo que se aprende"</h2>
+            <div className="contlogo">
+                <img className="ImgLogo" src={OMDLogo} alt="" />
+            </div>
+                <span></span>
+            <div className="contFrase">
+                <h2>"Se triunfa con lo que se aprende"</h2>
+            </div>
+
+
+
         </div>
 );
 }

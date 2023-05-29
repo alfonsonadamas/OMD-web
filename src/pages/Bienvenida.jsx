@@ -10,7 +10,7 @@ const Bienvenida = () => {
         <img src="../src/assets/img/OMD_blanco.png" alt="" />
         <h3>Gracias por formar parte de nuestra organizacion</h3>
         <Link className="btn_bienvenida" to={"/login"}>
-          Iniciar sesion
+          Ver Perfil
         </Link>
       </div>
     </div>
