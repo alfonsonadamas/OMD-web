@@ -1,0 +1,166 @@
+.textoCinto{
+    background-color: #D65886;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+.textoCinto h2{
+    color: white;
+    font-size: 50px;
+
+}
+
+/* .imagenCapacitacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
+.imagenCapacitacion img{
+    width: 700px;
+    height: 500px;
+
+    border-radius: 15px;
+} */
+
+.contenidoCapacitacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    margin: 50px;
+}
+
+.contenidoCapacitacion img{
+    width: 700px;
+    height: 500px;
+
+    border-radius: 15px;
+}
+
+.informacionCap{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  flex-direction: column;
+}
+
+.informacionCap h1{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.informacionCap button{
+    display: flex;
+    margin-top: 20px;
+    padding: 15px;
+
+    border: none;
+    border-radius: 30px;
+    background-color: #d65886;
+    font-weight: bolder;
+    color: white;
+}
+
+.informacionCap button:hover{
+    background-color: #FAD263;
+
+    color: white;
+}
+
+.datosCap{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+
+.datosCap p{
+    /* padding: 50px;  */
+    height: 60px;
+    width: 250px;
+    margin-top: 20px;
+
+}
+
+@media screen and (max-width: 1200px) {
+    .textoCinto h2{
+        font-size: 30px;
+    
+    }
+    
+    .contenidoCapacitacion img{
+        height: 300px;
+        width: auto;
+    }
+    
+    .informacionCap h1{
+        font-size: 25px;
+        width: 300px;
+        margin-left: 15px;
+        padding: 0;
+    
+    
+    }
+    
+    .datosCap{
+        width: 450px;
+    }
+    
+    
+    .informacionCap button{
+        margin-left:350px ;
+    }
+    
+    .informacionCap{
+        width: 100px;
+    }
+    
+    
+    }
+
+
+@media screen and (max-width: 500px) {
+.textoCinto h2{
+    font-size: 30px;
+
+}
+
+.contenidoCapacitacion img{
+    height: 200px;
+    width: 200px;
+}
+
+.informacionCap h1{
+    font-size: 23px;
+    width: 250px;
+    margin-left: 15px;
+    padding: 0;
+
+
+}
+
+.datosCap{
+    width: 250px;
+}
+
+
+.informacionCap button{
+    margin-left:350px ;
+}
+
+.informacionCap{
+    width: 100px;
+}
+
+
+}
+
+
+

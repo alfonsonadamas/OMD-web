@@ -23,8 +23,9 @@ import EditarPerfil from "../pages/EditarPerfil";
 import DocumentoPerfil from "../components/DocumentoPerfil";
 import RegistrarEmpresa from "../pages/EditarPerfil";
 import RegistroCompania from "../pages/RegistrarCompania";
-=======
+
 import Noticia from "../pages/Noticia";
+import Capacitacion from "../pages/Capacitacion";
 
 
 export const router = createBrowserRouter([
@@ -149,6 +150,11 @@ export const router = createBrowserRouter([
         element: <Noticia />,
 
       },
+
+      {
+        path:"/capacitacion",
+        element:<Capacitacion/>,
+      }
     ],
   },
 ]);
