@@ -14,7 +14,7 @@
   align-items: center;
   width: 493px;
   margin: 90px 0;
-  margin-right: 70px;
+  /* margin-right: 70px; */
 }
 
 .form_login img {
@@ -92,8 +92,13 @@
   top: 30%;
 }
 
+.login_img{
+  width: 450px;
+  height: auto;
+  margin: 0 40px;
+}
 .login_img img{
-    width: 450px;
+    width: 100%;
     height: auto;
     border-radius: 22px;
 }
@@ -182,4 +187,60 @@
   font-weight: bolder;
   margin-top: 0px;
   text-align: end;
+}
+
+@media (max-width: 1200px) {
+  button{
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 956px) {
+  .login_img {
+    display: none;
+  }
+}
+
+@media (max-width: 445px) {
+  .form_login img{
+    width: 277px;
+    margin-bottom: 10px;
+  }
+  .input_icon img{
+    width: 20px;
+  }
+  .form_login form{
+    align-items: center;
+    width: auto;
+  }
+  .input_form input{
+    width: 282px;
+  }
+  .fg_password{
+    text-align: center;
+  }
+  .button_sbt{
+    width: 282px;
+  }
+}
+
+@media (max-width: 312px) {
+  .form_login img {
+    width: 243px;
+  }
+
+  .input_icon img {
+    width: 20px;
+  }
+
+  .input_form input {
+    width: 231px;
+  }
+
+  .button_sbt {
+    width: 231px;
+  }
+  .register_tittle h2{
+    font-size: 21px;
+  }
 }
