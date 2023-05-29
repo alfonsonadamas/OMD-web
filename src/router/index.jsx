@@ -155,6 +155,11 @@ export const router = createBrowserRouter([
         path: "/noticia/:id_noticia",
         element: <Noticia />,
       },
+
+      {
+        path:"/capacitacion",
+        element:<Capacitacion/>,
+      }
     ],
   },
 ]);

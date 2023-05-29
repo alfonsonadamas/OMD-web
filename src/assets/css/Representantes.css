@@ -53,3 +53,58 @@
 .num_con h2 span{
     color: #F1BA0A;
 }
+
+
+@media screen and (max-width: 600px) {
+    .num_one{
+        flex-direction: column-reverse;
+
+    }
+    .num_one img{
+        width: auto;
+    }
+
+    .num_two{
+        flex-direction: column-reverse;
+    }
+    .num_two img{
+        width: auto;
+    }
+
+    .num_con h2{
+        margin-left: auto;
+
+    }
+
+    .num_con p{
+        margin-left: auto;
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .num_one{
+        flex-direction: column-reverse;
+
+    }
+    .num_one img{
+        width: auto;
+    }
+
+    .num_two{
+        flex-direction: column-reverse;
+    }
+    .num_two img{
+        width: auto;
+    }
+
+    .num_con h2{
+        margin-left: auto;
+
+    }
+
+    .num_con p{
+        margin-left: auto;
+        font-size: 25px;
+    }
+}

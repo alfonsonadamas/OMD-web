@@ -3,7 +3,7 @@ import '../assets/css/nosotros.css'
 
 const QuienesSomos = () =>  {
     return(
-        <div className="contenedor" data-aos="fade-up">
+        <div className="contenedor" >
             <div className="nosotros">
                 <h2>¿QUIÉNES SOMOS?</h2>
                 <p>Somos un órgano autónomo e independiente
@@ -14,8 +14,12 @@ const QuienesSomos = () =>  {
                 desarrollo, bienestar y crecimiento de la mujer
                 y su familia.</p>
             </div>
+
+         
             <img src="../src/assets/img/EquipoOMD.jpg" alt="" />
+             
         </div>
+
     )
 }
 

@@ -5,6 +5,8 @@ import M2 from '../assets/img/3-3.png'
 
 const MisVis = () => {
     return(
+
+
         <div className="ConMV">
             <div  data-aos="fade-right" className="conMis">
                 <div>
@@ -15,9 +17,11 @@ const MisVis = () => {
                     specimen book. 
                     It has survived not only five centuries, but also the leap into electronic typesetting, 
                     remaining essentially unchanged.</p>
-                </div>
-                <img src={M1} alt="" />
+                </div>    
+                    <img src={M1} alt="" /> 
             </div>
+
+
             <div  data-aos="fade-left" className="conVis">
                 <div>
                     <h2 className="MV">Visión</h2>
