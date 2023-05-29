@@ -48,7 +48,7 @@ const RegistroCompania = () => {
     nombreCompañia: Yup.string().required("Campo Requerido"),
     correoEmpresa: Yup.string().required("Campo Requerido").email(),
     sobreEmpresa: Yup.string().required("Campo Requerido"),
-    telefono: Yup.string().required("Campo Requerido").length(8),
+    telefono: Yup.string().required("Campo Requerido").length(10),
     ubicacion: Yup.string().required("Campo Requerido"),
   });
 

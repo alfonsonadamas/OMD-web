@@ -79,7 +79,7 @@ const Perfil = () => {
                   <button onClick={handleShow}>Generar QR</button>
                 </div>
 
-                <Modal show={show} onHide={handleClose}>
+                <Modal show={show} onHide={handleClose} centered>
                   <Modal.Header closeButton>
                     <Modal.Title>QR Generado</Modal.Title>
                   </Modal.Header>

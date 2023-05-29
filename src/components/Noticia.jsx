@@ -131,8 +131,8 @@ const Noticia = () => {
               </div>
               {data2.map((item2) => (
                 <div className="Comentarios" key={item2.uid}>
-                  {auth.currentUser.photoURL == null ? (
-                    <img src="../src/assets/img/perfil.jpg" alt="" />
+                  {item2.fotoPerfil == null ? (
+                    <img src="../src/assets/img/perfil.png" alt="perfil" />
                   ) : (
                     <img src={item2.fotoPerfil} alt="" />
                   )}

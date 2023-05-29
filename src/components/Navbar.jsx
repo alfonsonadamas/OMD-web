@@ -69,7 +69,7 @@ const Navbar = ({ img, perfil }) => {
             <Offcanvas.Title>
               <img
                 className="imgLogoO"
-                src="\src\assets\img\OMD_logo.jpg"
+                src="\src\assets\img\OMD_logo.png"
                 alt=""
               />
             </Offcanvas.Title>

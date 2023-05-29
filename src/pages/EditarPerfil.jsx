@@ -107,7 +107,7 @@ const EditarPerfil = () => {
                   <div className="info_general">
                     <div className="foto_perfil">
                       {auth.currentUser.photoURL == null ? (
-                        <img src="../assets/img/perfil.png" alt="" />
+                        <img src="../src/assets/img/perfil.png" alt="" />
                       ) : (
                         <img src={auth.currentUser.photoURL} alt="" />
                       )}
