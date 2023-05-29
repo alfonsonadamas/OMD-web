@@ -151,11 +151,11 @@ export const useFirestore = () => {
     }
   };
 
-  const getComents = async () => {
+  const getComents = async (idNoticia) => {
     try {
       setLoading(true);
       const dataref = collection(db, "comentarios");
-      const q = query(dataref);
+      const q = query(dataref, where("noticia", "==", idNoticia));
       const querySnapshot = await getDocs(q);
       if (!querySnapshot.empty) {
         const dataDB = querySnapshot.docs.map((doc) => doc.data());
@@ -241,15 +241,18 @@ export const useFirestore = () => {
     }
   };
 
-  const addComent = async (comentario) => {
+  const addComent = async (comentario, idNoticia) => {
     try {
       setLoading(true);
+      setComents(coments + 1);
       const newDoc = {
         uid: auth.currentUser.uid,
         comentario: comentario,
         fechaDePublicacion: getCurrentDate(),
         nombreUsuario: auth.currentUser.displayName,
         fotoPerfil: auth.currentUser.photoURL,
+        comentarios: coments,
+        noticia: idNoticia,
       };
 
       const docRef = doc(db, "comentarios", random());
@@ -333,6 +336,11 @@ export const useFirestore = () => {
     } finally {
       setLoading(false);
     }
+  };
+
+  const updateComents = () => {
+    try {
+    } catch (error) {}
   };
 
   return {

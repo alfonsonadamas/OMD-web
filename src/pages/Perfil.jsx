@@ -1,7 +1,7 @@
 import { auth, db, login, logout } from "../config/firebase";
 import Navbar from "../components/Navbar";
 import "../assets/css/perfil.css";
-import logoOMD from '../assets/img/OMD_logo.png'
+import logoOMD from "../assets/img/OMD_logo.png";
 import perfil from "../assets/img/perfil.jpg";
 import Login from "../pages/Login";
 import { useContext, useEffect, useState } from "react";
@@ -37,7 +37,6 @@ const Perfil = () => {
   useEffect(() => {
     getUser();
     getCompany();
-    console.log(auth.currentUser.photoURL);
   }, []);
 
   const handleLogout = async () => {
@@ -71,7 +70,7 @@ const Perfil = () => {
             <div className="info_general">
               <div className="foto_perfil">
                 {auth.currentUser.photoURL == null ? (
-                  <img src="../assets/img/perfil.png" alt="" />
+                  <img src="../src/assets/img/perfil.jpg" alt="" />
                 ) : (
                   <img src={auth.currentUser.photoURL} alt="" />
                 )}
