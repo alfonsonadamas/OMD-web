@@ -14,6 +14,7 @@ import DocumentoPerfil from "../components/DocumentoPerfil";
 import QRCode from "react-qr-code";
 import PDF from "../components/PDF";
 import Button from "react-bootstrap/Button";
+import Alert from 'react-bootstrap/Alert';
 import Modal from "react-bootstrap/Modal";
 
 const Perfil = () => {
@@ -178,7 +179,13 @@ const Perfil = () => {
             </div>
           </div>
         ) : (
-          <div>No estas verificado</div>
+          <div>
+          <Alert key="danger" variant="danger">
+            <Alert.Heading>No estas verificado...</Alert.Heading>
+            <p>Por favor espera a que los administradores te verifiquen. Para cualquier aclaración, acudir al siguiente correo</p>
+            <a href="mailto:organizacionomd@gmail.com?Subject=Solicitud%20de%20verificación">organizacionomd@gmail.com</a>
+        </Alert>
+          </div>
         )
       )}
     </div>
