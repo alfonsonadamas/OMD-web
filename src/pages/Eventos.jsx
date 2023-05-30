@@ -69,6 +69,7 @@ const Eventos = () => {
             titulo={item.nombre}
             descripcion={item.descripcion}
             disponibles={item.espaciosDisponibles}
+            id_capacitacion={item.nombre}
           ></Capacitacion>
         </div>
       ))}

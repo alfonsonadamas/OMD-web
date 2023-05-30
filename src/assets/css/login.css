@@ -92,15 +92,15 @@
   top: 30%;
 }
 
-.login_img{
+.login_img {
   width: 450px;
   height: auto;
   margin: 0 40px;
 }
-.login_img img{
-    width: 100%;
-    height: auto;
-    border-radius: 22px;
+.login_img img {
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
 }
 
 .fg_password {
@@ -190,7 +190,7 @@
 }
 
 @media (max-width: 1200px) {
-  button{
+  button {
     margin-right: 0px;
   }
 }
@@ -202,24 +202,24 @@
 }
 
 @media (max-width: 445px) {
-  .form_login img{
+  .form_login img {
     width: 277px;
     margin-bottom: 10px;
   }
-  .input_icon img{
+  .input_icon img {
     width: 20px;
   }
-  .form_login form{
+  .form_login form {
     align-items: center;
     width: auto;
   }
-  .input_form input{
+  .input_form input {
     width: 282px;
   }
-  .fg_password{
+  .fg_password {
     text-align: center;
   }
-  .button_sbt{
+  .button_sbt {
     width: 282px;
   }
 }
@@ -240,7 +240,52 @@
   .button_sbt {
     width: 231px;
   }
-  .register_tittle h2{
+  .register_tittle h2 {
     font-size: 21px;
+  }
+}
+
+.FormularioEmpresa {
+  margin-top: 30px;
+}
+
+.FormularioEmpresa form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.FormularioEmpresa form input {
+  width: 35vw;
+  box-sizing: border-box;
+  padding: 5px;
+  text-align: left;
+  font-family: "Readex Pro", sans-serif;
+  width: 393px;
+  border-radius: 15px;
+  border: 2px solid black;
+  margin-bottom: 20px;
+}
+
+.FormularioEmpresa form textarea {
+  width: 35vw;
+  box-sizing: border-box;
+  padding: 5px;
+  text-align: left;
+  font-family: "Readex Pro", sans-serif;
+  width: 393px;
+  border-radius: 15px;
+  border: 2px solid black;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .FormularioEmpresa form input {
+    width: 70vw;
+  }
+  .FormularioEmpresa form textarea {
+    width: 70vw;
+    resize: none;
   }
 }

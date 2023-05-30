@@ -6,6 +6,7 @@ import { sendEmailVerification } from "firebase/auth";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import { useFirestore } from "../config/useFirestore";
+import sendNewUserEmail from "../config/sendNewUserEmail";
 
 const RegistroUsuario = () => {
   const navigate = useNavigate();
@@ -19,6 +20,7 @@ const RegistroUsuario = () => {
     try {
       setSubmitting(true);
       addUser(nombre, apellidoPaterno, apellidoMaterno, fechaNacimiento);
+      sendNewUserEmail(auth.currentUser.displayName, auth.currentUser.email);
       navigate("/bienvenida");
     } catch (error) {
       console.log(error);
