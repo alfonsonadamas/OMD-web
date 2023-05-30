@@ -114,6 +114,7 @@ const EditarPerfil = () => {
                       <input
                         type="file"
                         name="imagen"
+                        className="input_perfil"
                         onChange={(e) => setFile(e.target.files[0])}
                       />
                     </div>
@@ -159,7 +160,7 @@ const EditarPerfil = () => {
                           <p>
                             Fecha de Nacimiento:{" "}
                             <input
-                              type="text"
+                              type="date"
                               defaultValue={values.fechaNacimiento}
                               name="fechaNacimiento"
                               onChange={handleChange}

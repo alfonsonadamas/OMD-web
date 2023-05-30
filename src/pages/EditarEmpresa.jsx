@@ -102,7 +102,7 @@ const EditarEmpresa = () => {
             {({ handleChange, isSubmitting, values, handleSubmit }) => (
               <form onSubmit={handleSubmit}>
                 <div className="info_general">
-                  <div className="foto_perfil">
+                  <div className="foto_perfil foto_empresa">
                     <img src={item.logo} alt="" />
 
                     <input

@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { db, auth, storage } from "./firebase";
 import {
+  and,
   collection,
   doc,
   getDocs,
@@ -74,6 +75,46 @@ export const useFirestore = () => {
     try {
       setLoading(true);
       const dataref = collection(db, "news");
+      const q = query(dataref, where("nombre", "==", nombre));
+      const querySnapshot = await getDocs(q);
+      if (!querySnapshot.empty) {
+        const dataDB = querySnapshot.docs.map((doc) => doc.data());
+        setData(dataDB);
+      } else {
+        setExist(false);
+      }
+    } catch (error) {
+      console.log(error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const getCapacitacion = async (nombre) => {
+    try {
+      setLoading(true);
+      const dataref = collection(db, "capacitaciones");
+      const q = query(dataref, where("nombre", "==", nombre));
+      const querySnapshot = await getDocs(q);
+      if (!querySnapshot.empty) {
+        const dataDB = querySnapshot.docs.map((doc) => doc.data());
+        setData(dataDB);
+      } else {
+        setExist(false);
+      }
+    } catch (error) {
+      console.log(error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const getCapacitacionHorario = async (nombre) => {
+    try {
+      setLoading(true);
+      const dataref = collection(db, "capacitacionesHorarios");
       const q = query(dataref, where("nombre", "==", nombre));
       const querySnapshot = await getDocs(q);
       if (!querySnapshot.empty) {
@@ -172,6 +213,52 @@ export const useFirestore = () => {
     }
   };
 
+  const getRegistroCapacitaciones = async (nombre) => {
+    try {
+      setLoading(true);
+      const dataref = collection(db, "registrosCapacitaciones");
+      const q = query(
+        dataref,
+        where("nombreCapacitacion", "==", nombre),
+        where("uid", "==", auth.currentUser.uid)
+      );
+      const querySnapshot = await getDocs(q);
+      if (!querySnapshot.empty) {
+        const dataDB = querySnapshot.docs.map((doc) => doc.data());
+        setComents(dataDB.length);
+        setData2(dataDB);
+      } else {
+        setExist(false);
+      }
+    } catch (error) {
+      console.log(error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const getNosotros = async () => {
+    try {
+      setLoading(true);
+      const dataref = collection(db, "nosotros");
+      const q = query(dataref);
+      const querySnapshot = await getDocs(q);
+      if (!querySnapshot.empty) {
+        const dataDB = querySnapshot.docs.map((doc) => doc.data());
+        setComents(dataDB.length);
+        setData2(dataDB);
+      } else {
+        setExist(false);
+      }
+    } catch (error) {
+      console.log(error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const getCurrentDate = () => {
     var date = new Date().getDate();
     var month = new Date().getMonth() + 1;
@@ -205,6 +292,24 @@ export const useFirestore = () => {
       await updateProfile(auth.currentUser, {
         displayName: nombre + " " + apellidoPaterno,
       });
+    } catch (error) {
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const addRegistroCapacitacion = async (uid, nombreCapacitacion, correo) => {
+    try {
+      setLoading(true);
+      const newDoc = {
+        uid: uid,
+        nombreCapacitacion: nombreCapacitacion,
+        correo: correo,
+      };
+
+      const docRef = doc(db, "registrosCapacitaciones", random());
+      await setDoc(docRef, newDoc);
     } catch (error) {
       setError(error.message);
     } finally {
@@ -338,11 +443,6 @@ export const useFirestore = () => {
     }
   };
 
-  const updateComents = () => {
-    try {
-    } catch (error) {}
-  };
-
   return {
     data,
     data2,
@@ -365,5 +465,10 @@ export const useFirestore = () => {
     coments,
     updateCompany,
     getTrainings,
+    getCapacitacion,
+    getCapacitacionHorario,
+    addRegistroCapacitacion,
+    getRegistroCapacitaciones,
+    getNosotros,
   };
 };

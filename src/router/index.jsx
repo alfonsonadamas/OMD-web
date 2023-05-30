@@ -25,6 +25,7 @@ import RegistrarEmpresa from "../pages/EditarPerfil";
 import RegistroCompania from "../pages/RegistrarCompania";
 import Noticia from "../pages/Noticia";
 import EditarEmpresa from "../pages/EditarEmpresa";
+import Capacitacion from "../pages/Capacitacion";
 
 export const router = createBrowserRouter([
   {
@@ -157,9 +158,9 @@ export const router = createBrowserRouter([
       },
 
       {
-        path:"/capacitacion",
-        element:<Capacitacion/>,
-      }
+        path: "/capacitacion/:id_capacitacion",
+        element: <Capacitacion />,
+      },
     ],
   },
 ]);
