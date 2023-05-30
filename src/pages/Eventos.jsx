@@ -14,7 +14,16 @@ const descripcion =
   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ab qui in dolorum deserunt enim accusamus perspiciatis laudantium, doloremque, sed aspernatur ratione sequi pariatur quas dignissimos illum velit omnis vero?¡";
 
 const Eventos = () => {
-  const { data, data2, error, loading, getNews, getTrainings } = useFirestore();
+  const {
+    data,
+    data2,
+    error,
+    loading,
+    getNews,
+    getTrainings,
+    coments,
+    getComents,
+  } = useFirestore();
   useEffect(() => {
     getNews();
     getTrainings();
@@ -35,9 +44,6 @@ const Eventos = () => {
       </div>
       {data.map((item) => (
         <div key={item.id_noticia}>
-          {comentarios++}
-          {console.log(comentarios)}
-
           <Evento
             dirimg={item.imagen}
             creador={item.autor}
@@ -63,6 +69,7 @@ const Eventos = () => {
             titulo={item.nombre}
             descripcion={item.descripcion}
             disponibles={item.espaciosDisponibles}
+            id_capacitacion={item.nombre}
           ></Capacitacion>
         </div>
       ))}

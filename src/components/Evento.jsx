@@ -25,15 +25,7 @@ const Evento = (evento) => {
             <p>{evento.descripcion}</p>
           </div>
           {/* comentarios y likes */}
-          <div className="comentarios">
-            <div className="coment">
-              <p>{evento.numComentarios} comentarios</p>
-            </div>
-            <div className="like">
-              <p>{evento.numlikes}</p>
-              <img src="\src\assets\img\Corazon.png" alt="like" />
-            </div>
-          </div>
+          <div className="comentarios"></div>
         </div>
       </div>
     </>

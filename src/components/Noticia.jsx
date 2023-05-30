@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import "../assets/css/noticia.css";
 import { useFirestore } from "../config/useFirestore";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Spinner from "./Spinner";
 import { auth } from "../config/firebase";
 import { Formik } from "formik";
@@ -30,12 +30,13 @@ const Noticia = () => {
 
   const { user } = useUserContext();
 
+  const [comentarios, setComentarios] = useState(0);
   let { id_noticia } = useParams();
   const navigate = useNavigate();
 
   useEffect(() => {
     getNoticia(id_noticia);
-    getComents();
+    getComents(id_noticia);
   }, []);
 
   const handleComent = async (
@@ -44,7 +45,8 @@ const Noticia = () => {
   ) => {
     try {
       setSubmitting(true);
-      await addComent(comentario);
+
+      await addComent(comentario, id_noticia);
       navigate(`/noticia/${id_noticia}`);
     } catch (error) {
       console.log(error);
@@ -88,7 +90,7 @@ const Noticia = () => {
                 <p>{item.noticia}</p>
               </div>
               <div className="Interacciones">
-                <p className="com">{coments} comentarios</p>
+                <p className="com">{coments} comentario(s)</p>
                 <div className="Like">
                   <p>{item.likes}</p>
                   <img src="\src\assets\img\Corazon.png" alt="like" />
@@ -129,7 +131,11 @@ const Noticia = () => {
               </div>
               {data2.map((item2) => (
                 <div className="Comentarios" key={item2.uid}>
-                  <img src={item2.fotoPerfil} alt="" />
+                  {item2.fotoPerfil == null ? (
+                    <img src="../src/assets/img/perfil.png" alt="perfil" />
+                  ) : (
+                    <img src={item2.fotoPerfil} alt="" />
+                  )}
 
                   <div className="Comentario">
                     <h4>{item2.nombreUsuario}</h4>

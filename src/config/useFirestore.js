@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { db, auth, storage } from "./firebase";
 import {
+  and,
   collection,
   doc,
   getDocs,
@@ -90,6 +91,46 @@ export const useFirestore = () => {
     }
   };
 
+  const getCapacitacion = async (nombre) => {
+    try {
+      setLoading(true);
+      const dataref = collection(db, "capacitaciones");
+      const q = query(dataref, where("nombre", "==", nombre));
+      const querySnapshot = await getDocs(q);
+      if (!querySnapshot.empty) {
+        const dataDB = querySnapshot.docs.map((doc) => doc.data());
+        setData(dataDB);
+      } else {
+        setExist(false);
+      }
+    } catch (error) {
+      console.log(error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const getCapacitacionHorario = async (nombre) => {
+    try {
+      setLoading(true);
+      const dataref = collection(db, "capacitacionesHorarios");
+      const q = query(dataref, where("nombre", "==", nombre));
+      const querySnapshot = await getDocs(q);
+      if (!querySnapshot.empty) {
+        const dataDB = querySnapshot.docs.map((doc) => doc.data());
+        setData(dataDB);
+      } else {
+        setExist(false);
+      }
+    } catch (error) {
+      console.log(error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const getCompany = async () => {
     console.log(auth.currentUser);
     try {
@@ -151,10 +192,56 @@ export const useFirestore = () => {
     }
   };
 
-  const getComents = async () => {
+  const getComents = async (idNoticia) => {
     try {
       setLoading(true);
       const dataref = collection(db, "comentarios");
+      const q = query(dataref, where("noticia", "==", idNoticia));
+      const querySnapshot = await getDocs(q);
+      if (!querySnapshot.empty) {
+        const dataDB = querySnapshot.docs.map((doc) => doc.data());
+        setComents(dataDB.length);
+        setData2(dataDB);
+      } else {
+        setExist(false);
+      }
+    } catch (error) {
+      console.log(error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const getRegistroCapacitaciones = async (nombre) => {
+    try {
+      setLoading(true);
+      const dataref = collection(db, "registrosCapacitaciones");
+      const q = query(
+        dataref,
+        where("nombreCapacitacion", "==", nombre),
+        where("uid", "==", auth.currentUser.uid)
+      );
+      const querySnapshot = await getDocs(q);
+      if (!querySnapshot.empty) {
+        const dataDB = querySnapshot.docs.map((doc) => doc.data());
+        setComents(dataDB.length);
+        setData2(dataDB);
+      } else {
+        setExist(false);
+      }
+    } catch (error) {
+      console.log(error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const getNosotros = async () => {
+    try {
+      setLoading(true);
+      const dataref = collection(db, "nosotros");
       const q = query(dataref);
       const querySnapshot = await getDocs(q);
       if (!querySnapshot.empty) {
@@ -212,6 +299,24 @@ export const useFirestore = () => {
     }
   };
 
+  const addRegistroCapacitacion = async (uid, nombreCapacitacion, correo) => {
+    try {
+      setLoading(true);
+      const newDoc = {
+        uid: uid,
+        nombreCapacitacion: nombreCapacitacion,
+        correo: correo,
+      };
+
+      const docRef = doc(db, "registrosCapacitaciones", random());
+      await setDoc(docRef, newDoc);
+    } catch (error) {
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const addCompany = async (
     nombreCompañia,
     correoEmpresa,
@@ -241,15 +346,18 @@ export const useFirestore = () => {
     }
   };
 
-  const addComent = async (comentario) => {
+  const addComent = async (comentario, idNoticia) => {
     try {
       setLoading(true);
+      setComents(coments + 1);
       const newDoc = {
         uid: auth.currentUser.uid,
         comentario: comentario,
         fechaDePublicacion: getCurrentDate(),
         nombreUsuario: auth.currentUser.displayName,
         fotoPerfil: auth.currentUser.photoURL,
+        comentarios: coments,
+        noticia: idNoticia,
       };
 
       const docRef = doc(db, "comentarios", random());
@@ -357,5 +465,10 @@ export const useFirestore = () => {
     coments,
     updateCompany,
     getTrainings,
+    getCapacitacion,
+    getCapacitacionHorario,
+    addRegistroCapacitacion,
+    getRegistroCapacitaciones,
+    getNosotros,
   };
 };

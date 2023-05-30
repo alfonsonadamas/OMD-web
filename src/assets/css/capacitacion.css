@@ -1,103 +1,110 @@
-.capacitacion{
-    display: flex;
-    margin:0px 60px;
-    margin-top: 50px;
-    margin-bottom: 130px;
-    align-items: center;
+.capacitacion {
+  display: flex;
+  margin: 0px 60px;
+  margin-top: 50px;
+  margin-bottom: 130px;
+  align-items: center;
 }
 
-.capacitacion img{
-    width: 572px;
-    height: 401px;
-    object-fit: cover;
+.capacitacion img {
+  width: 572px;
+  height: 401px;
+  object-fit: cover;
 }
 
-.subcapa{
-    margin: 30px;
+.subcapa {
+  margin: 30px;
 }
 
-.subcapa h1{
-    margin: 0px;
+.subcapa h1 {
+  margin: 0px;
 }
 
-.subcapa p{
-    margin: 10px 0 10px;
+.subcapa p {
+  margin: 10px 0 10px;
 }
 
 .disponibilidad {
-    font-weight: bold;
+  font-weight: bold;
 }
 
-.disponibilidad span{
-    color: #F1BA0A;
+.disponibilidad span {
+  color: #f1ba0a;
 }
 
-.capa-button{
-    background-color:#D65886;
-    color: white;
-    border-radius: 10px;
-    border: 0px;
-    cursor: pointer;
-    width: 110px;
-    height: 30px;
+.capa-button {
+  background-color: #d65886;
+  color: white;
+  border-radius: 10px;
+  border: 0px;
+  cursor: pointer;
+  /* width: 110px;
+    height: 30px; */
+  padding: 4px 10px;
+  margin-top: 15px;
+
+  text-decoration: none;
+  transition: all 0.2s ease-in;
 }
 
-.capa-button:active{
-    transform: scale(0.98);
-    background-color: #d658869f;
-    ;
+.capa-button:hover {
+  color: white;
+  background-color: #f1ba0a;
+}
+
+.capa-button:active {
+  transform: scale(0.98);
+  background-color: #d658869f;
 }
 
 @media (max-width: 1201px) {
-    .capacitacion img{
-        width: auto;
-    }
-    .capa-button{
-        margin-right: 0px;
-    }
+  .capacitacion img {
+    width: auto;
+  }
+  .capa-button {
+    margin-right: 0px;
+  }
 }
 
 /* movil */
 @media (max-width: 1013px) {
-    .capacitacion{
-        flex-direction: column-reverse;
-        margin: 0px 0px;
-    }
-    .capacitacion img{
-        width: 100%;
-        height: 100%;
-    }
-    .capa-imagen{
-        width: 100%;
-        height: 500px;
-    }
+  .capacitacion {
+    flex-direction: column-reverse;
+    margin: 0px 0px;
+  }
+  .capacitacion img {
+    width: 100%;
+    height: 100%;
+  }
+  .capa-imagen {
+    width: 100%;
+    height: 500px;
+  }
 }
 
 @media (max-width: 518px) {
-    .subcapa{
-        margin-left: 20px;
-        margin-right: 20px;
-    }
+  .subcapa {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 
-    .capa-imagen {
-        width: auto;
-        height: auto;
-    }
+  .capa-imagen {
+    width: auto;
+    height: auto;
+  }
 }
 
 @media (max-width: 518px) {
-    .capa-imagen {
-        width: auto;
-        height: auto;
-    }
+  .capa-imagen {
+    width: auto;
+    height: auto;
+  }
 
-    .subcapa p{
-        word-wrap: break-word;
-    }
+  .subcapa p {
+    word-wrap: break-word;
+  }
 
-    .capacitacion{
-        align-items: normal;
-    }
-
+  .capacitacion {
+    align-items: normal;
+  }
 }
-

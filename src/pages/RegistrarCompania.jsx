@@ -48,7 +48,7 @@ const RegistroCompania = () => {
     nombreCompañia: Yup.string().required("Campo Requerido"),
     correoEmpresa: Yup.string().required("Campo Requerido").email(),
     sobreEmpresa: Yup.string().required("Campo Requerido"),
-    telefono: Yup.string().required("Campo Requerido").length(8),
+    telefono: Yup.string().required("Campo Requerido").length(10),
     ubicacion: Yup.string().required("Campo Requerido"),
   });
 
@@ -84,103 +84,106 @@ const RegistroCompania = () => {
             handleBlur,
             isSubmitting,
           }) => (
-            <form onSubmit={handleSubmit}>
-              <div className="input_form">
-                <input
-                  type="text"
-                  placeholder="Nombre de la empresa o emprendimiento"
-                  value={values.name}
-                  onChange={handleChange}
-                  name="nombreCompañia"
-                  onBlur={handleBlur}
-                />
-              </div>
+            <div className="FormularioEmpresa">
+              <form onSubmit={handleSubmit}>
+                <div className="input_formRegistrar">
+                  <input
+                    type="text"
+                    placeholder="Nombre de la empresa o emprendimiento"
+                    value={values.name}
+                    onChange={handleChange}
+                    name="nombreCompañia"
+                    onBlur={handleBlur}
+                  />
+                </div>
 
-              <p className="error">
-                {errors.nombreCompañia &&
-                  touched.nombreCompañia &&
-                  errors.nombreCompañia}
-              </p>
+                <p className="error">
+                  {errors.nombreCompañia &&
+                    touched.nombreCompañia &&
+                    errors.nombreCompañia}
+                </p>
 
-              <div className="input_form">
-                <input
-                  type="email"
-                  placeholder="Correo de contacto"
-                  value={values.correoEmpresa}
-                  name="correoEmpresa"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                />
-              </div>
-              <p className="error">
-                {errors.correoEmpresa &&
-                  touched.correoEmpresa &&
-                  errors.correoEmpresa}
-              </p>
+                <div className="input_formRegistrar">
+                  <input
+                    type="email"
+                    placeholder="Correo de contacto"
+                    value={values.correoEmpresa}
+                    name="correoEmpresa"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  />
+                </div>
+                <p className="error">
+                  {errors.correoEmpresa &&
+                    touched.correoEmpresa &&
+                    errors.correoEmpresa}
+                </p>
 
-              <div className="input_form">
-                <input
-                  type="text"
-                  placeholder="Telefono de la empresa"
-                  value={values.telefono}
-                  name="telefono"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                />
-              </div>
-              <p className="error">
-                {errors.telefono && touched.telefono && errors.telefono}
-              </p>
+                <div className="input_formRegistrar">
+                  <input
+                    type="text"
+                    placeholder="Telefono de la empresa"
+                    value={values.telefono}
+                    name="telefono"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  />
+                </div>
+                <p className="error">
+                  {errors.telefono && touched.telefono && errors.telefono}
+                </p>
 
-              <div className="input_form">
-                <input
-                  type="text"
-                  placeholder="Ubicación"
-                  value={values.ubicacion}
-                  name="ubicacion"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                />
-              </div>
-              <p className="error">
-                {errors.ubicacion && touched.ubicacion && errors.ubicacion}
-              </p>
+                <div className="input_formRegistrar">
+                  <input
+                    type="text"
+                    placeholder="Ubicación"
+                    value={values.ubicacion}
+                    name="ubicacion"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  />
+                </div>
+                <p className="error">
+                  {errors.ubicacion && touched.ubicacion && errors.ubicacion}
+                </p>
 
-              <div className="registroLogo">
-                <h3>Logo</h3>
-                <input
-                  type="file"
-                  required
-                  onChange={(e) => setFile(e.target.files[0])}
-                />
-              </div>
+                <div className="registroLogo">
+                  <h3>Logo</h3>
+                  <input
+                    type="file"
+                    required
+                    onChange={(e) => setFile(e.target.files[0])}
+                  />
+                </div>
 
-              <div className="input_form">
-                <textarea
-                  name="sobreEmpresa"
-                  id=""
-                  cols="55"
-                  rows="5"
-                  placeholder="Cuentanos acerca de tu empresa"
-                  value={values.sobreEmpresa}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                ></textarea>
-              </div>
-              <p className="error">
-                {errors.sobreEmpresa &&
-                  touched.sobreEmpresa &&
-                  errors.sobreEmpresa}
-              </p>
+                <div className="input_formRegistrar">
+                  <textarea
+                    className="area"
+                    name="sobreEmpresa"
+                    id=""
+                    cols="55"
+                    rows="5"
+                    placeholder="Cuentanos acerca de tu empresa"
+                    value={values.sobreEmpresa}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  ></textarea>
+                </div>
+                <p className="error">
+                  {errors.sobreEmpresa &&
+                    touched.sobreEmpresa &&
+                    errors.sobreEmpresa}
+                </p>
 
-              <button
-                className="button_sbt_register"
-                type="submit"
-                disabled={isSubmitting}
-              >
-                Registrar
-              </button>
-            </form>
+                <button
+                  className="button_sbt_register"
+                  type="submit"
+                  disabled={isSubmitting}
+                >
+                  Registrar
+                </button>
+              </form>
+            </div>
           )}
         </Formik>
       </div>
