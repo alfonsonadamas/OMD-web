@@ -84,7 +84,7 @@ const Calendar = () => {
   const registroEvento2 = async () => {
     await getRegistroEvento1(uid);
     if (data5.length === 0) {
-      addRegistroEvento(uid, "evento1", email);
+      addRegistroEvento(uid, "evento2", email);
       setDisabled2(true);
 
       let dia;
@@ -110,7 +110,7 @@ const Calendar = () => {
   const registroEvento3 = async () => {
     await getRegistroEvento1(uid);
     if (data6.length === 0) {
-      addRegistroEvento(uid, "evento1", email);
+      addRegistroEvento(uid, "evento3", email);
       setDisabled3(true);
 
       let dia;
