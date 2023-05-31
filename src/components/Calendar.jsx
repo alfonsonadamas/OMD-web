@@ -12,6 +12,8 @@ const Calendar = () => {
   const [classlist2, setClasslist2] = useState("false");
   const [classlist3, setClasslist3] = useState("false");
   const [disabled, setDisabled] = useState(false);
+  const [disabled2, setDisabled2] = useState(false);
+  const [disabled3, setDisabled3] = useState(false);
   const {
     data,
     data2,
@@ -83,7 +85,7 @@ const Calendar = () => {
     await getRegistroEvento1(uid);
     if (data5.length === 0) {
       addRegistroEvento(uid, "evento1", email);
-      setDisabled(true);
+      setDisabled2(true);
 
       let dia;
       let mes;
@@ -109,7 +111,7 @@ const Calendar = () => {
     await getRegistroEvento1(uid);
     if (data6.length === 0) {
       addRegistroEvento(uid, "evento1", email);
-      setDisabled(true);
+      setDisabled3(true);
 
       let dia;
       let mes;
@@ -201,7 +203,7 @@ const Calendar = () => {
               </div>
             </div>
             {user ? (
-              <button onClick={registroEvento2} disabled={disabled}>
+              <button onClick={registroEvento2} disabled={disabled2}>
                 Registrarme
               </button>
             ) : (
@@ -239,7 +241,7 @@ const Calendar = () => {
               </div>
             </div>
             {user ? (
-              <button onClick={registroEvento3} disabled={disabled}>
+              <button onClick={registroEvento3} disabled={disabled3}>
                 Registrarme
               </button>
             ) : (
