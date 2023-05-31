@@ -24,6 +24,11 @@ export const useFirestore = () => {
   const [data, setData] = useState([]);
   const [data2, setData2] = useState([]);
   const [data3, setData3] = useState([]);
+  const [data4, setData4] = useState([]);
+  const [data5, setData5] = useState([]);
+  const [data6, setData6] = useState([]);
+  const [data7, setData7] = useState([]);
+  const [data8, setData8] = useState([]);
   const [dataCompany, setDataCompany] = useState([]);
   const [error, setError] = useState();
   const [loading, setLoading] = useState(false);
@@ -238,6 +243,71 @@ export const useFirestore = () => {
     }
   };
 
+  const getRegistroEvento1 = async (uid) => {
+    try {
+      const dataref = collection(db, "registrosEventos");
+      const q = query(
+        dataref,
+        where("idEvento", "==", "evento1"),
+        where("uid", "==", uid)
+      );
+      const querySnapshot = await getDocs(q);
+      if (!querySnapshot.empty) {
+        const dataDB = querySnapshot.docs.map((doc) => doc.data());
+        setData4(dataDB);
+      } else {
+        setExist(false);
+      }
+    } catch (error) {
+      console.log(error);
+      setError(error.message);
+    }
+  };
+
+  const getRegistroEvento2 = async (uid) => {
+    try {
+      const dataref = collection(db, "registrosEventos");
+      const q = query(
+        dataref,
+        where("idEvento", "==", "evento2"),
+        where("uid", "==", uid)
+      );
+      const querySnapshot = await getDocs(q);
+      if (!querySnapshot.empty) {
+        const dataDB = querySnapshot.docs.map((doc) => doc.data());
+        setComents(dataDB.length);
+        setData5(dataDB);
+      } else {
+        setExist(false);
+      }
+    } catch (error) {
+      console.log(error);
+      setError(error.message);
+    }
+  };
+
+  const getRegistroEvento3 = async (uid) => {
+    try {
+      const dataref = collection(db, "registrosEventos");
+      const q = query(
+        dataref,
+        where("idEvento", "==", "evento3"),
+        where("uid", "==", uid)
+      );
+      const querySnapshot = await getDocs(q);
+      if (!querySnapshot.empty) {
+        const dataDB = querySnapshot.docs.map((doc) => doc.data());
+        setComents(dataDB.length);
+        setData6(dataDB);
+      } else {
+        setExist(false);
+      }
+    } catch (error) {
+      console.log(error);
+      setError(error.message);
+    }
+  };
+
   const getNosotros = async () => {
     try {
       setLoading(true);
@@ -251,6 +321,210 @@ export const useFirestore = () => {
       } else {
         setExist(false);
       }
+    } catch (error) {
+      console.log(error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const getInicio1 = async () => {
+    try {
+      setLoading(true);
+      const dataref = collection(db, "inicio1");
+      const q = query(dataref);
+      const querySnapshot = await getDocs(q);
+      if (!querySnapshot.empty) {
+        const dataDB = querySnapshot.docs.map((doc) => doc.data());
+        setData2(dataDB);
+      } else {
+        setExist(false);
+      }
+    } catch (error) {
+      console.log(error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const getGaleriaHex = async () => {
+    try {
+      setLoading(true);
+      const dataref = collection(db, "eventosImg");
+      const q = query(dataref);
+      const querySnapshot = await getDocs(q);
+      if (!querySnapshot.empty) {
+        const dataDB = querySnapshot.docs.map((doc) => doc.data());
+        setData(dataDB);
+      } else {
+        setExist(false);
+      }
+    } catch (error) {
+      console.log(error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const getCarruselAfi = async () => {
+    try {
+      setLoading(true);
+      const dataref = collection(db, "afiliados");
+      const q = query(dataref);
+      const querySnapshot = await getDocs(q);
+      if (!querySnapshot.empty) {
+        const dataDB = querySnapshot.docs.map((doc) => doc.data());
+        setData(dataDB);
+      } else {
+        setExist(false);
+      }
+    } catch (error) {
+      console.log(error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const getvermasCarrusel = async () => {
+    try {
+      setLoading(true);
+      const dataref = collection(db, "vermasCarrusel");
+      const q = query(dataref);
+      const querySnapshot = await getDocs(q);
+      if (!querySnapshot.empty) {
+        const dataDB = querySnapshot.docs.map((doc) => doc.data());
+        setData(dataDB);
+      } else {
+        setExist(false);
+      }
+    } catch (error) {
+      console.log(error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const getInicio2 = async () => {
+    try {
+      setLoading(true);
+      const dataref = collection(db, "inicio2");
+      const q = query(dataref);
+      const querySnapshot = await getDocs(q);
+      if (!querySnapshot.empty) {
+        const dataDB = querySnapshot.docs.map((doc) => doc.data());
+        setData(dataDB);
+      } else {
+        setExist(false);
+      }
+    } catch (error) {
+      console.log(error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const getCarrusel = async () => {
+    try {
+      setLoading(true);
+      const dataref = collection(db, "carrusel");
+      const q = query(dataref);
+      const querySnapshot = await getDocs(q);
+      if (!querySnapshot.empty) {
+        const dataDB = querySnapshot.docs.map((doc) => doc.data());
+        setData(dataDB);
+      } else {
+        setExist(false);
+      }
+    } catch (error) {
+      console.log(error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const getGaleria = async () => {
+    try {
+      setLoading(true);
+      const dataref = collection(db, "galeria");
+
+      const q = query(dataref, where("numImagen", "==", "1"));
+      const querySnapshot = await getDocs(q);
+      const dataDB = querySnapshot.docs.map((doc) => doc.data());
+      setData(dataDB);
+
+      const q2 = query(dataref, where("numImagen", "==", "2"));
+      const querySnapshot2 = await getDocs(q2);
+      const dataDB2 = querySnapshot2.docs.map((doc) => doc.data());
+      setData2(dataDB2);
+
+      const q3 = query(dataref, where("numImagen", "==", "3"));
+      const querySnapshot3 = await getDocs(q3);
+      const dataDB3 = querySnapshot3.docs.map((doc) => doc.data());
+      setData3(dataDB3);
+
+      const q4 = query(dataref, where("numImagen", "==", "4"));
+      const querySnapshot4 = await getDocs(q4);
+      const dataDB4 = querySnapshot4.docs.map((doc) => doc.data());
+      setData4(dataDB4);
+
+      const q5 = query(dataref, where("numImagen", "==", "5"));
+      const querySnapshot5 = await getDocs(q5);
+      const dataDB5 = querySnapshot5.docs.map((doc) => doc.data());
+      setData5(dataDB5);
+
+      const q6 = query(dataref, where("numImagen", "==", "6"));
+      const querySnapshot6 = await getDocs(q6);
+      const dataDB6 = querySnapshot6.docs.map((doc) => doc.data());
+      setData6(dataDB6);
+
+      const q7 = query(dataref, where("numImagen", "==", "7"));
+      const querySnapshot7 = await getDocs(q7);
+      const dataDB7 = querySnapshot7.docs.map((doc) => doc.data());
+      setData7(dataDB7);
+
+      const q8 = query(dataref, where("numImagen", "==", "8"));
+      const querySnapshot8 = await getDocs(q8);
+      const dataDB8 = querySnapshot8.docs.map((doc) => doc.data());
+      setData8(dataDB8);
+    } catch (error) {
+      console.log(error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const getCalendario = async () => {
+    try {
+      setLoading(true);
+      const dataref = collection(db, "proximosEventos");
+      const q = query(dataref, where("idEvento", "==", "evento1"));
+      const querySnapshot = await getDocs(q);
+
+      const dataDB = querySnapshot.docs.map((doc) => doc.data());
+
+      setData(dataDB);
+
+      const q2 = query(dataref, where("idEvento", "==", "evento2"));
+      const querySnapshot2 = await getDocs(q2);
+
+      const dataDB2 = querySnapshot2.docs.map((doc) => doc.data());
+
+      setData2(dataDB2);
+
+      const q3 = query(dataref, where("idEvento", "==", "evento3"));
+      const querySnapshot3 = await getDocs(q3);
+
+      const dataDB3 = querySnapshot3.docs.map((doc) => doc.data());
+
+      setData3(dataDB3);
     } catch (error) {
       console.log(error);
       setError(error.message);
@@ -309,6 +583,24 @@ export const useFirestore = () => {
       };
 
       const docRef = doc(db, "registrosCapacitaciones", random());
+      await setDoc(docRef, newDoc);
+    } catch (error) {
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const addRegistroEvento = async (uid, idEvento, correo) => {
+    try {
+      setLoading(true);
+      const newDoc = {
+        uid: uid,
+        idEvento: idEvento,
+        correo: correo,
+      };
+
+      const docRef = doc(db, "registrosEventos", random());
       await setDoc(docRef, newDoc);
     } catch (error) {
       setError(error.message);
@@ -447,6 +739,11 @@ export const useFirestore = () => {
     data,
     data2,
     data3,
+    data4,
+    data5,
+    data6,
+    data7,
+    data8,
     dataCompany,
     error,
     loading,
@@ -470,5 +767,17 @@ export const useFirestore = () => {
     addRegistroCapacitacion,
     getRegistroCapacitaciones,
     getNosotros,
+    getCalendario,
+    getRegistroEvento1,
+    getRegistroEvento2,
+    getRegistroEvento3,
+    addRegistroEvento,
+    getInicio1,
+    getGaleria,
+    getGaleriaHex,
+    getCarruselAfi,
+    getCarrusel,
+    getvermasCarrusel,
+    getInicio2,
   };
 };

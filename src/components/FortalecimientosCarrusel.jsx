@@ -1,50 +1,59 @@
-import '../assets/css/fortalecimientos.css'
+import { useEffect } from "react";
+import "../assets/css/fortalecimientos.css";
+import { useFirestore } from "../config/useFirestore";
+import Spinner from "./Spinner";
 
-const FortalecimientosCarrusel = () =>{
-    return(
-        <div className='fortalecimiento_carrusel'>
-            <div className="fortalecimiento_r">
-                <div className='fortalecimiento_imagen'>
-                    <img src="../src/assets/img/fortalecimiento_prof.jpg" alt="" />
-                </div>
-                <div className="fortalecimiento_tittle">
-                    <h3>Fortalecimiento <span>Profesional</span></h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, cumque ab a adipisci id nemo nam autem odit esse fugiat! Blanditiis, mollitia? Obcaecati necessitatibus itaque dignissimos ipsa aliquid doloribus eos.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, cumque ab a adipisci id nemo nam autem odit esse fugiat! Blanditiis, mollitia? Obcaecati necessitatibus itaque dignissimos ipsa aliquid doloribus eos.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, cumque ab a adipisci id nemo nam autem odit esse fugiat! Blanditiis, mollitia? Obcaecati necessitatibus itaque dignissimos ipsa aliquid doloribus eos.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, cumque ab a adipisci id nemo nam autem odit esse fugiat! Blanditiis, mollitia? Obcaecati necessitatibus itaque dignissimos ipsa aliquid doloribus eos.</p>                
-                </div>
-            </div>
+const FortalecimientosCarrusel = () => {
+  const { data, getvermasCarrusel, loading } = useFirestore();
+  useEffect(() => {
+    getvermasCarrusel();
+  }, []);
 
-            <div className="fortalecimiento_r fortalecimiento_i">
-                <div className="fortalecimiento_tittle">
-                    <h3>Fortalecimiento <span>Emocional</span></h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, cumque ab a adipisci id nemo nam autem odit esse fugiat! Blanditiis, mollitia? Obcaecati necessitatibus itaque dignissimos ipsa aliquid doloribus eos.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, cumque ab a adipisci id nemo nam autem odit esse fugiat! Blanditiis, mollitia? Obcaecati necessitatibus itaque dignissimos ipsa aliquid doloribus eos.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, cumque ab a adipisci id nemo nam autem odit esse fugiat! Blanditiis, mollitia? Obcaecati necessitatibus itaque dignissimos ipsa aliquid doloribus eos.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, cumque ab a adipisci id nemo nam autem odit esse fugiat! Blanditiis, mollitia? Obcaecati necessitatibus itaque dignissimos ipsa aliquid doloribus eos.</p>                
-                </div>
-                <div className='fortalecimiento_imagen'>
-                    <img src="../src/assets/img/fortalecimiento_emo.jpg" alt="" />
-                </div>
-                
-                
-            </div>
+  if (loading) return <Spinner></Spinner>;
 
-            <div className="fortalecimiento_r">
-                <div className='fortalecimiento_imagen'>
-                    <img src="../src/assets/img/fortalecimiento_eco.jpg" alt="" />
-                </div>
-                <div className="fortalecimiento_tittle">
-                    <h3>Fortalecimiento <span>Economico</span></h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, cumque ab a adipisci id nemo nam autem odit esse fugiat! Blanditiis, mollitia? Obcaecati necessitatibus itaque dignissimos ipsa aliquid doloribus eos.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, cumque ab a adipisci id nemo nam autem odit esse fugiat! Blanditiis, mollitia? Obcaecati necessitatibus itaque dignissimos ipsa aliquid doloribus eos.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, cumque ab a adipisci id nemo nam autem odit esse fugiat! Blanditiis, mollitia? Obcaecati necessitatibus itaque dignissimos ipsa aliquid doloribus eos.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, cumque ab a adipisci id nemo nam autem odit esse fugiat! Blanditiis, mollitia? Obcaecati necessitatibus itaque dignissimos ipsa aliquid doloribus eos.</p>                
-                </div>
+  return (
+    <div>
+      {data.map((item) => (
+        <div className="fortalecimiento_carrusel">
+          <div className="fortalecimiento_r">
+            <div className="fortalecimiento_imagen">
+              <img src={item.imagen1} alt="" />
             </div>
+            <div className="fortalecimiento_tittle">
+              <h3>
+                Fortalecimiento <span>{item.fortalecimiento1}</span>
+              </h3>
+              <p>{item.texto1}</p>
+            </div>
+          </div>
+
+          <div className="fortalecimiento_r fortalecimiento_i">
+            <div className="fortalecimiento_tittle">
+              <h3>
+                Fortalecimiento <span>{item.fortalecimiento2}</span>
+              </h3>
+              <p>{item.texto2}</p>
+            </div>
+            <div className="fortalecimiento_imagen">
+              <img src={item.imagen2} alt="" />
+            </div>
+          </div>
+
+          <div className="fortalecimiento_r">
+            <div className="fortalecimiento_imagen">
+              <img src={item.imagen3} alt="" />
+            </div>
+            <div className="fortalecimiento_tittle">
+              <h3>
+                Fortalecimiento <span>{item.fortalecimiento3}</span>
+              </h3>
+              <p>{item.texto3}</p>
+            </div>
+          </div>
         </div>
-    )
-}
+      ))}
+    </div>
+  );
+};
 
 export default FortalecimientosCarrusel;

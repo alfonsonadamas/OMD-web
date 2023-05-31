@@ -92,10 +92,12 @@
   transition: all 0.2s ease-in;
   color: white;
   font-size: 1.5vw;
+  text-decoration: none;
 }
 
 .btoncinta:hover {
   background-color: #f1ba0a;
+  color: white;
 }
 
 @media (max-width: 1200px) {

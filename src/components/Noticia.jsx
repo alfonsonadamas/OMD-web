@@ -91,10 +91,6 @@ const Noticia = () => {
               </div>
               <div className="Interacciones">
                 <p className="com">{coments} comentario(s)</p>
-                <div className="Like">
-                  <p>{item.likes}</p>
-                  <img src="\src\assets\img\Corazon.png" alt="like" />
-                </div>
               </div>
               <div className="AgregarCom">
                 <Formik
@@ -122,7 +118,9 @@ const Noticia = () => {
                             disabled={isSubmitting}
                           />
                         ) : (
-                          <Link to={"/login"}>Enviar</Link>
+                          <Link to={"/login"} className="pub_coment">
+                            Enviar
+                          </Link>
                         )}
                       </div>
                     </form>

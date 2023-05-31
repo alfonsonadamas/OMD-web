@@ -1,48 +1,36 @@
-import Carousel from 'react-bootstrap/Carousel';
-import { Link } from 'react-router-dom';
-import '../assets/css/carousel_afi.css'
+import Carousel from "react-bootstrap/Carousel";
+import { Link } from "react-router-dom";
+import "../assets/css/carousel_afi.css";
+import { useFirestore } from "../config/useFirestore";
+import { useEffect } from "react";
 
 function CarruselAfiliados() {
+  const { data, getCarruselAfi } = useFirestore();
+
+  useEffect(() => {
+    getCarruselAfi();
+  }, []);
   return (
-    <div className='afi_carrusel'>
-        <h2 className='afi_tittle'>Nuestros Afiliados</h2>
-    <Carousel variant="dark">
-      <Carousel.Item className='afiliado'>
-        <div className='afi_perfil'>
-            <img src="./src/assets/img/perfil.png" alt="First slide"/>
-            <div className='afi_info'>
-                <h3>Empresa</h3>
-                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae metus at lectus volutpat dapibus sed feugiat erat. Aenean tempus massa a erat rutrum ultricies. Integer”</p>
-                <Link className='button_afi'>Afiliate</Link>
+    <div className="afi_carrusel">
+      <h2 className="afi_tittle">Nuestros Afiliados</h2>
+
+      <Carousel variant="dark">
+        {data.map((item) => (
+          <Carousel.Item className="afiliado">
+            <div className="afi_perfil">
+              <img src={item.imagen} alt="First slide" />
+              <div className="afi_info">
+                <h3>{item.titulo}</h3>
+                <p>{item.texto}</p>
+                <Link className="button_afi" to={"/login"}>
+                  Afiliate
+                </Link>
+              </div>
             </div>
-        </div>
-        
-      </Carousel.Item>
-      <Carousel.Item className='afiliado'>
-        <div className='afi_perfil'>
-            <img src="./src/assets/img/perfil.png" alt="First slide"/>
-            <div className='afi_info'>
-                <h3>Empresa</h3>
-                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae metus at lectus volutpat dapibus sed feugiat erat. Aenean tempus massa a erat rutrum ultricies. Integer”</p>
-                <Link className='button_afi'>Afiliate</Link>
-            </div>
-        </div>
-        
-      </Carousel.Item>
-      <Carousel.Item className='afiliado'>
-        <div className='afi_perfil'>
-            <img src="./src/assets/img/perfil.png" alt="First slide"/>
-            <div className='afi_info'>
-                <h3>Empresa</h3>
-                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae metus at lectus volutpat dapibus sed feugiat erat. Aenean tempus massa a erat rutrum ultricies. Integer”</p>
-                <Link className='button_afi'>Afiliate</Link>
-            </div>
-        </div>
-        
-      </Carousel.Item>
-    </Carousel>
+          </Carousel.Item>
+        ))}
+      </Carousel>
     </div>
-    
   );
 }
 

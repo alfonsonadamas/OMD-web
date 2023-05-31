@@ -78,7 +78,7 @@ const CapacitacionCuerpo = (capacitacion) => {
         <img src={capacitacion.imagen} alt="" />
       </div>
       <div className="informacionCap">
-        <h1>HORARIOS</h1>
+        <h1>HORARIO</h1>
 
         <div className="todaInfo">
           {data.map((item) => (
@@ -98,7 +98,9 @@ const CapacitacionCuerpo = (capacitacion) => {
             INSCRIBIRSE
           </button>
         ) : (
-          <Link to={"/login"}>INSCRIBIRSE</Link>
+          <Link to={"/login"} className="registroCapacitacion">
+            INSCRIBIRSE
+          </Link>
         )}
       </div>
       <Offcanvas show={show} onHide={handleClose}>

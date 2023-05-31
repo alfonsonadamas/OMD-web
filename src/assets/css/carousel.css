@@ -35,6 +35,7 @@
 
 .tittle:last-of-type {
   color: #f1ba0a;
+  text-transform: uppercase;
 }
 
 .butn {

@@ -1,126 +1,41 @@
-import Carousel from 'react-bootstrap/Carousel';
-import { Link } from 'react-router-dom';
-import '../assets/css/carousel.css'
+import Carousel from "react-bootstrap/Carousel";
+import { Link } from "react-router-dom";
+import "../assets/css/carousel.css";
+import { useFirestore } from "../config/useFirestore";
+import { useEffect } from "react";
 
 function Slider() {
+  const { data, getCarrusel } = useFirestore();
 
+  useEffect(() => {
+    getCarrusel();
+  }, []);
   return (
-    
-    <Carousel className='slider'>
+    <Carousel className="slider">
+      {data.map((item) => (
+        <Carousel.Item className="slider_item">
+          <div className="gradient"></div>
 
-      <Carousel.Item className='slider_item'>
-      <div className='gradient' >
-                
-                </div>
-                
-                <div >
-                <img
-                  className="d-block w-100"
-                  src="./src/assets/img/slide_1.jpg"
-                  alt="Third slide"
-                />
-                
-        
-                <Carousel.Caption className='slider_caption'>
-                  
-                    <div className='slider_label' >
-                        <h3 className='tittle'>FORTALECIMIENTO</h3>
-                        <h3 className='tittle'>PROFESIONAL</h3>
-                        <p className='description'>
-                           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quo cupiditate dolorem aperiam doloribus eius aspernatur reiciendis porro accusantium. Maiores sunt dolore ratione ad, impedit et debitis ea architecto praesentium.
-                        </p>
-                        <Link to='/fortalecimientos' className='butn'>Mas Informacion</Link>
+          <div>
+            <img
+              className="d-block w-100"
+              src={item.imagen}
+              alt="Third slide"
+            />
 
-                    </div>
-                  
-                </Carousel.Caption>
-                </div>
-      </Carousel.Item>
-
-      <Carousel.Item className='slider_item'>
-        <div className='gradient'>
-                
-        </div>
-        
-        <div>
-        <img
-          className="d-block w-100"
-          src="./src/assets/img/slide_2.jpg"
-          alt="Third slide"
-        />
-        
-
-        <Carousel.Caption className='slider_caption'>
-          
-            <div className='slider_label'>
-                <h3 className='tittle'>FORTALECIMIENTO</h3>
-                <h3 className='tittle'>PROFESIONAL</h3>
-                <p className='description'>
-                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quo cupiditate dolorem aperiam doloribus eius aspernatur reiciendis porro accusantium. Maiores sunt dolore ratione ad, impedit et debitis ea architecto praesentium.
-                </p>
-                <Link to='/fortalecimientos' className='butn'>Mas Informacion</Link>
-            </div>
-          
-        </Carousel.Caption>
-        </div>
-      </Carousel.Item>
-      
-      <Carousel.Item className='slider_item'>
-        <div className='gradient'>
-                
-        </div>
-        
-        <div>
-        <img
-          className="d-block w-100"
-          src="./src/assets/img/slide_3.jpg"
-          alt="Third slide"
-        />
-        
-
-        <Carousel.Caption className='slider_caption'>
-          
-            <div className='slider_label'>
-                <h3 className='tittle'>FORTALECIMIENTO</h3>
-                <h3 className='tittle'>PROFESIONAL</h3>
-                <p className='description'>
-                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quo cupiditate dolorem aperiam doloribus eius aspernatur reiciendis porro accusantium. Maiores sunt dolore ratione ad, impedit et debitis ea architecto praesentium.
-                </p>
-                <Link to='/fortalecimientos' className='butn'>Mas Informacion</Link>
-            </div>
-          
-        </Carousel.Caption>
-        </div>
-        
-        
-      </Carousel.Item>
-      <Carousel.Item className='slider_item'>
-        <div className='gradient'>
-                
-        </div>
-        
-        <div>
-        <img
-          className="d-block w-100"
-          src="./src/assets/img/slide_4.jpg"
-          alt="Third slide"
-        />
-        
-
-        <Carousel.Caption className='slider_caption'>
-          
-            <div className='slider_label'>
-                <h3 className='tittle'>FORTALECIMIENTO</h3>
-                <h3 className='tittle'>PROFESIONAL</h3>
-                <p className='description'>
-                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quo cupiditate dolorem aperiam doloribus eius aspernatur reiciendis porro accusantium. Maiores sunt dolore ratione ad, impedit et debitis ea architecto praesentium.
-                </p>
-                <Link to='/fortalecimientos' className='butn'>Mas Informacion</Link>
-            </div>
-          
-        </Carousel.Caption>
-        </div>
-      </Carousel.Item>
+            <Carousel.Caption className="slider_caption">
+              <div className="slider_label">
+                <h3 className="tittle">FORTALECIMIENTO</h3>
+                <h3 className="tittle">{item.fortalecimiento}</h3>
+                <p className="description">{item.texto}</p>
+                <Link to="/fortalecimientos" className="butn">
+                  Mas Informacion
+                </Link>
+              </div>
+            </Carousel.Caption>
+          </div>
+        </Carousel.Item>
+      ))}
     </Carousel>
   );
 }
